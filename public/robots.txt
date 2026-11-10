@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://grupo-toccante-eventos.layonlad.chatgpt.site/sitemap.xml

@@ -1,0 +1,86 @@
+{
+  "cerimonial-retrato-equipe": {
+    "width": 360,
+    "height": 480,
+    "files": [
+      {
+        "src": "/media/cerimonial-retrato-equipe-360.webp",
+        "width": 360,
+        "height": 480,
+        "bytes": 36388
+      }
+    ]
+  },
+  "cerimonial-orientacao": {
+    "width": 666,
+    "height": 1182,
+    "files": [
+      {
+        "src": "/media/cerimonial-orientacao-360.webp",
+        "width": 360,
+        "height": 639,
+        "bytes": 47198
+      },
+      {
+        "src": "/media/cerimonial-orientacao-666.webp",
+        "width": 666,
+        "height": 1182,
+        "bytes": 121168
+      }
+    ]
+  },
+  "cerimonial-lista-convidados": {
+    "width": 311,
+    "height": 553,
+    "files": [
+      {
+        "src": "/media/cerimonial-lista-convidados-311.webp",
+        "width": 311,
+        "height": 553,
+        "bytes": 25748
+      }
+    ]
+  },
+  "cerimonial-mesa-doces": {
+    "width": 311,
+    "height": 553,
+    "files": [
+      {
+        "src": "/media/cerimonial-mesa-doces-311.webp",
+        "width": 311,
+        "height": 553,
+        "bytes": 42464
+      }
+    ]
+  },
+  "cerimonial-lapela": {
+    "width": 666,
+    "height": 1182,
+    "files": [
+      {
+        "src": "/media/cerimonial-lapela-360.webp",
+        "width": 360,
+        "height": 639,
+        "bytes": 63806
+      },
+      {
+        "src": "/media/cerimonial-lapela-666.webp",
+        "width": 666,
+        "height": 1182,
+        "bytes": 176642
+      }
+    ]
+  },
+  "cerimonial-chegada-noiva": {
+    "width": 311,
+    "height": 553,
+    "files": [
+      {
+        "src": "/media/cerimonial-chegada-noiva-311.webp",
+        "width": 311,
+        "height": 553,
+        "bytes": 39164
+      }
+    ]
+  }
+}

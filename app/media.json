@@ -1,0 +1,224 @@
+{
+  "decoracao-mesa-bolo": {
+    "width": 843,
+    "height": 556,
+    "files": [
+      {
+        "src": "/media/decoracao-mesa-bolo-400.webp",
+        "width": 400,
+        "height": 264,
+        "bytes": 46790
+      },
+      {
+        "src": "/media/decoracao-mesa-bolo-800.webp",
+        "width": 800,
+        "height": 528,
+        "bytes": 133774
+      },
+      {
+        "src": "/media/decoracao-mesa-bolo-843.webp",
+        "width": 843,
+        "height": 556,
+        "bytes": 133084
+      }
+    ]
+  },
+  "decoracao-flores-corredor": {
+    "width": 447,
+    "height": 447,
+    "files": [
+      {
+        "src": "/media/decoracao-flores-corredor-400.webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 26676
+      },
+      {
+        "src": "/media/decoracao-flores-corredor-447.webp",
+        "width": 447,
+        "height": 447,
+        "bytes": 29552
+      }
+    ]
+  },
+  "buffet-salgados": {
+    "width": 537,
+    "height": 716,
+    "files": [
+      {
+        "src": "/media/buffet-salgados-400.webp",
+        "width": 400,
+        "height": 533,
+        "bytes": 43094
+      },
+      {
+        "src": "/media/buffet-salgados-537.webp",
+        "width": 537,
+        "height": 716,
+        "bytes": 59916
+      }
+    ]
+  },
+  "buffet-mesa-mineira": {
+    "width": 734,
+    "height": 552,
+    "files": [
+      {
+        "src": "/media/buffet-mesa-mineira-400.webp",
+        "width": 400,
+        "height": 301,
+        "bytes": 37092
+      },
+      {
+        "src": "/media/buffet-mesa-mineira-734.webp",
+        "width": 734,
+        "height": 552,
+        "bytes": 84084
+      }
+    ]
+  },
+  "buffet-doces": {
+    "width": 1096,
+    "height": 634,
+    "files": [
+      {
+        "src": "/media/buffet-doces-400.webp",
+        "width": 400,
+        "height": 231,
+        "bytes": 26908
+      },
+      {
+        "src": "/media/buffet-doces-800.webp",
+        "width": 800,
+        "height": 463,
+        "bytes": 74092
+      },
+      {
+        "src": "/media/buffet-doces-1096.webp",
+        "width": 1096,
+        "height": 634,
+        "bytes": 107676
+      }
+    ]
+  },
+  "buffet-docinhos": {
+    "width": 515,
+    "height": 687,
+    "files": [
+      {
+        "src": "/media/buffet-docinhos-400.webp",
+        "width": 400,
+        "height": 534,
+        "bytes": 70332
+      },
+      {
+        "src": "/media/buffet-docinhos-515.webp",
+        "width": 515,
+        "height": 687,
+        "bytes": 95652
+      }
+    ]
+  },
+  "buffet-massas": {
+    "width": 955,
+    "height": 377,
+    "files": [
+      {
+        "src": "/media/buffet-massas-400.webp",
+        "width": 400,
+        "height": 158,
+        "bytes": 22952
+      },
+      {
+        "src": "/media/buffet-massas-800.webp",
+        "width": 800,
+        "height": 316,
+        "bytes": 64730
+      },
+      {
+        "src": "/media/buffet-massas-955.webp",
+        "width": 955,
+        "height": 377,
+        "bytes": 82956
+      }
+    ]
+  },
+  "equipe-buffet": {
+    "width": 1280,
+    "height": 580,
+    "files": [
+      {
+        "src": "/media/equipe-buffet-400.webp",
+        "width": 400,
+        "height": 181,
+        "bytes": 21326
+      },
+      {
+        "src": "/media/equipe-buffet-800.webp",
+        "width": 800,
+        "height": 362,
+        "bytes": 64466
+      },
+      {
+        "src": "/media/equipe-buffet-1280.webp",
+        "width": 1280,
+        "height": 580,
+        "bytes": 123196
+      }
+    ]
+  },
+  "musical-teclado": {
+    "width": 710,
+    "height": 554,
+    "files": [
+      {
+        "src": "/media/musical-teclado-400.webp",
+        "width": 400,
+        "height": 312,
+        "bytes": 14534
+      },
+      {
+        "src": "/media/musical-teclado-710.webp",
+        "width": 710,
+        "height": 554,
+        "bytes": 34788
+      }
+    ]
+  },
+  "musical-violino": {
+    "width": 514,
+    "height": 543,
+    "files": [
+      {
+        "src": "/media/musical-violino-400.webp",
+        "width": 400,
+        "height": 423,
+        "bytes": 19150
+      },
+      {
+        "src": "/media/musical-violino-514.webp",
+        "width": 514,
+        "height": 543,
+        "bytes": 28508
+      }
+    ]
+  },
+  "musical-sax": {
+    "width": 530,
+    "height": 566,
+    "files": [
+      {
+        "src": "/media/musical-sax-400.webp",
+        "width": 400,
+        "height": 427,
+        "bytes": 24192
+      },
+      {
+        "src": "/media/musical-sax-530.webp",
+        "width": 530,
+        "height": 566,
+        "bytes": 34670
+      }
+    ]
+  }
+}

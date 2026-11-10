@@ -1,0 +1,902 @@
+/* Institutional typography and navigation */
+:root {
+  --content-width: 1360px;
+  --gutter: clamp(1.25rem, 5.5vw, 6.75rem);
+  --section-space: clamp(4rem, 7.5vw, 7.5rem);
+  --h2: clamp(2.55rem, 4.4vw, 4.8rem);
+  --radius: 0;
+}
+.eyebrow {
+  font-size: 0.69rem;
+  letter-spacing: 0.19em;
+}
+.eyebrow::before {
+  width: 1.9rem;
+}
+.site-header {
+  background: var(--black);
+  color: var(--ivory);
+  border-color: #ffffff25;
+}
+.header-inner {
+  min-height: 76px;
+}
+.brand > img {
+  width: 38px;
+  height: 44px;
+}
+.brand > span {
+  font-size: 1.6rem;
+  letter-spacing: -0.035em;
+}
+.desktop-nav {
+  gap: clamp(1rem, 2.1vw, 2.35rem);
+  font-size: 0.86rem;
+}
+.desktop-nav .button {
+  border-color: var(--gold);
+  color: var(--ivory);
+  padding-inline: 1.25rem;
+}
+.desktop-nav .button:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+.branch-menu > div {
+  background: var(--black);
+  color: var(--ivory);
+  border-color: var(--gold);
+  box-shadow: none;
+}
+.branch-menu > div a:hover {
+  color: var(--black);
+}
+.menu-toggle {
+  color: var(--ivory);
+  border: 0;
+  gap: 0.8rem;
+}
+.menu-lines {
+  width: 21px;
+  height: 7px;
+  border-block: 1px solid var(--gold);
+}
+.mobile-menu .eyebrow::before {
+  background: var(--gold);
+}
+.mobile-menu nav > a[href="/musica"],
+.mobile-menu nav > a[href="/buffet"],
+.mobile-menu nav > a[href="/decoracao"],
+.mobile-menu nav > a[href="/cerimonial"] {
+  font: 400 1.6rem/1.2 var(--font-display);
+  border-bottom: 1px solid var(--line);
+}
+.button:hover {
+  background: var(--black);
+  color: white;
+  border-color: var(--gold);
+}
+.text-link span,
+.button span,
+.index-arrow {
+  transition: transform 0.22s ease;
+}
+.text-link:hover span,
+.button:hover span {
+  transform: translateX(3px);
+}
+.floating-contact {
+  box-shadow: none;
+}
+.floating-contact:hover {
+  background: #34332e;
+}
+
+/* Full-bleed portrait of the event. The wide-screen gradient keeps copy off the photographic detail. */
+.cinema {
+  background: #171714;
+  color: var(--white);
+  isolation: isolate;
+  position: relative;
+  overflow: hidden;
+}
+.cinema-scene {
+  position: absolute;
+  inset: -28px 0 -2px 17%;
+  z-index: -2;
+  transform: translateY(var(--drift, 0px));
+}
+.cinema-scene .photo {
+  height: 100%;
+  width: 100%;
+  object-position: 53% 51%;
+}
+.cinema::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      #171714 3%,
+      #171714fa 18%,
+      #171714df 30%,
+      #17171491 48%,
+      #17171420 70%,
+      #17171410 100%
+    ),
+    linear-gradient(0deg, #171714c9, transparent 27%);
+}
+.cinema-inner {
+  min-height: clamp(590px, 78svh, 870px);
+  position: relative;
+  display: grid;
+  align-content: center;
+  padding-block: 4.5rem 7rem;
+}
+.cinema-copy {
+  width: min(100%, 43rem);
+}
+.cinema-copy .eyebrow {
+  color: #f2e7ca;
+  margin-bottom: clamp(1.5rem, 2.7vw, 2.8rem);
+}
+.cinema h1 {
+  font-size: clamp(5rem, 8.8vw, 9.25rem);
+  line-height: 0.87;
+  letter-spacing: -0.055em;
+}
+.cinema h1 em {
+  color: #e7cf95;
+}
+.cinema-intro {
+  margin-top: 1.7rem;
+  max-width: 36ch;
+  font-size: clamp(1rem, 1.35vw, 1.25rem);
+  line-height: 1.55;
+}
+.cinema .actions {
+  margin-top: 2rem;
+  gap: 1rem 2.1rem;
+}
+.cinema .button {
+  background: var(--ivory);
+  border-color: var(--ivory);
+  color: var(--black);
+  padding-inline: 1.4rem;
+}
+.cinema .button:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+.cinema .text-link {
+  border-bottom-color: #ffffff80;
+}
+.cinema-foot {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #ffffff50;
+  padding-top: 0.6rem;
+}
+.cinema-foot > * {
+  font: 700 0.66rem/1.4 var(--font-body);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.cinema-foot a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-height: 44px;
+}
+.cinema-foot a span {
+  color: #e7cf95;
+  font-size: 1rem;
+}
+.cinema-foot > span {
+  background: #202020b5;
+  padding: 0.35rem 0.55rem;
+}
+
+/* Introduction, branch directory and photographic sequence */
+.house-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  align-items: start;
+  gap: clamp(2rem, 8vw, 9rem);
+}
+.house-grid h2 {
+  font-size: clamp(3.2rem, 5.4vw, 6rem);
+  line-height: 0.99;
+}
+.house-story > p:first-child {
+  font: 400 clamp(1.65rem, 2.3vw, 2.55rem)/1.24 var(--font-display);
+  max-width: 34ch;
+}
+.house-story > p + p {
+  margin-top: 1.3rem;
+  max-width: 47ch;
+}
+.house-story .actions {
+  margin-top: 1rem;
+}
+.chapters {
+  background: #eeece6;
+  border-block: 1px solid var(--line);
+}
+.branch-index {
+  display: grid;
+  grid-template-columns: 0.84fr 1.16fr;
+  gap: clamp(1.5rem, 5.6vw, 6rem);
+  align-items: stretch;
+  margin-top: 2rem;
+}
+.index-plate {
+  background: #e4dfd5;
+  position: relative;
+  overflow: hidden;
+  min-height: 23rem;
+}
+.index-plate .photo {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  object-position: 50% 33%;
+}
+.index-list {
+  display: grid;
+}
+.index-link {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.1rem;
+  color: var(--branch-text);
+  background: var(--branch-bg);
+  padding: 1.25rem clamp(1.25rem, 2.25vw, 2.6rem);
+  border-bottom: 1px solid #0001;
+}
+.index-thumb {
+  display: none;
+}
+.index-link h3 {
+  font-size: clamp(2rem, 3.3vw, 3.9rem);
+  line-height: 1;
+}
+.index-link.theme-musica h3,
+.index-link.theme-buffet h3 {
+  color: var(--gold);
+}
+.index-link p {
+  max-width: 45ch;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  margin-top: 0.55rem;
+}
+.index-arrow {
+  align-self: center;
+  border: 1px solid var(--branch-detail);
+  border-radius: 50%;
+  width: 2.3rem;
+  height: 2.3rem;
+  display: grid;
+  place-items: center;
+}
+.index-link:hover .index-arrow,
+.index-link:focus-visible .index-arrow {
+  transform: translate(2px, -2px);
+}
+.collection {
+  background: var(--white);
+}
+.collection-grid {
+  display: grid;
+  grid-template-columns: 1.16fr 1.14fr 0.85fr;
+  align-items: start;
+  gap: clamp(1rem, 2.6vw, 3rem);
+}
+.collection-work {
+  min-width: 0;
+}
+.collection-work:nth-child(2) {
+  margin-top: clamp(2rem, 8vw, 8rem);
+}
+.collection-work:nth-child(3) {
+  margin-top: clamp(1rem, 3vw, 3rem);
+}
+.work-frame {
+  overflow: hidden;
+  aspect-ratio: 4/5;
+}
+.collection-work:nth-child(2) .work-frame {
+  aspect-ratio: 1.28;
+}
+.collection-work:nth-child(3) .work-frame {
+  aspect-ratio: 3/4;
+}
+.work-frame .photo {
+  height: 100%;
+  object-position: center 15%;
+  transition: transform 0.45s ease;
+}
+.collection-work:hover .photo {
+  transform: scale(1.025);
+}
+.collection-work h3 {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+  font-size: clamp(1.3rem, 1.85vw, 2.2rem);
+}
+.collection-work h3 span {
+  font: 400 1.1rem var(--font-body);
+}
+.experience-grid h2 {
+  max-width: 17ch;
+}
+.principles {
+  list-style: none;
+}
+.principles li {
+  padding: 1.4rem 0;
+}
+.principles p {
+  max-width: 49ch;
+}
+.cta-section:not([class*="theme-"]) {
+  background: #eae5da;
+  color: var(--black);
+  border-block: 1px solid var(--gold);
+}
+.cta-section:not([class*="theme-"]) .eyebrow {
+  color: var(--black);
+}
+.cta-section:not([class*="theme-"]) .button {
+  background: var(--black);
+  color: white;
+}
+.footer-grid {
+  padding-block: 1rem;
+}
+.footer-bottom {
+  border-color: #b5975866;
+}
+
+/* Service chapters and their timeline */
+.branch-hero {
+  padding: 0;
+}
+.branch-hero-grid {
+  align-items: stretch;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(2rem, 6vw, 7rem);
+}
+.branch-hero-copy {
+  align-self: center;
+  padding-block: clamp(3.4rem, 7vw, 7.5rem);
+}
+.branch-hero h1 {
+  font-size: clamp(3.25rem, 5.7vw, 6.3rem);
+  line-height: 0.99;
+  letter-spacing: -0.04em;
+}
+.chapter-cover {
+  overflow: hidden;
+  min-height: clamp(24rem, 36vw, 38rem);
+  position: relative;
+}
+.chapter-cover .photo {
+  position: absolute;
+  inset: 0;
+  object-position: center 38%;
+}
+.theme-cerimonial .chapter-cover .photo {
+  object-position: center 3%;
+}
+.theme-musica .chapter-cover .photo,
+.index-plate[data-branch="musica"] .photo {
+  object-position: center 9%;
+}
+.branch-hero.theme-cerimonial .branch-hero-copy {
+  background: transparent;
+  border: 0;
+  padding: clamp(3.4rem, 7vw, 7.5rem) 0;
+}
+.theme-cerimonial .eyebrow::before {
+  background: var(--white);
+}
+.branch-hero.theme-cerimonial .text-link {
+  border-color: var(--white);
+}
+.theme-buffet .chapter-cover,
+.theme-musica .chapter-cover {
+  border-left: 1px solid var(--branch-detail);
+}
+.service-grid {
+  gap: 0 clamp(2rem, 6vw, 7rem);
+  grid-template-columns: 1fr 1fr;
+}
+.service-grid article {
+  display: grid;
+  grid-template-columns: minmax(8rem, 0.86fr) 1.2fr;
+  align-items: baseline;
+  gap: 1rem;
+  padding-block: 1.6rem;
+}
+.service-grid h3 {
+  margin: 0;
+}
+.process-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(2rem, 6vw, 7rem);
+}
+.process-grid {
+  display: block;
+  margin: 0;
+}
+.process-grid li {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  column-gap: 1rem;
+  padding-block: 1.1rem;
+}
+.process-grid li > span {
+  grid-row: 1/3;
+  align-self: baseline;
+}
+.process-grid h3 {
+  margin: 0 0 0.35rem;
+}
+.process-grid p {
+  grid-column: 2;
+}
+
+/* Institutional pages and portfolio */
+.page-heading {
+  background: #eeeae1;
+}
+.page-heading.photo-masthead {
+  padding-block: 0;
+}
+.photo-masthead .masthead-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 6rem);
+}
+.masthead-copy {
+  padding-block: clamp(1rem, 2vw, 2rem);
+}
+.photo-masthead .masthead-copy {
+  padding-block: clamp(3rem, 5.5vw, 6rem);
+}
+.masthead-image {
+  height: clamp(17rem, 23vw, 27rem);
+  overflow: hidden;
+}
+.masthead-image .photo {
+  height: 100%;
+  object-position: center 38%;
+}
+[data-page="equipe"] .masthead-image .photo {
+  object-fit: contain;
+  background: var(--black);
+}
+[data-page="contato"] .masthead-image .photo {
+  object-position: center 24%;
+}
+.photo-masthead h1 {
+  font-size: clamp(3rem, 4.75vw, 5.7rem);
+  line-height: 1;
+}
+.story-film {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: clamp(2rem, 6vw, 6rem);
+}
+.story-film .section-heading {
+  margin-bottom: 1.6rem;
+}
+.story-film .text-link {
+  margin-top: 1rem;
+}
+.institutional-film {
+  min-width: 0;
+}
+.institutional-film video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #171714;
+  aspect-ratio: 16/9;
+}
+.institutional-film figcaption {
+  margin-top: 0.7rem;
+  font-size: 0.85rem;
+}
+.people-grid {
+  margin-block: 0;
+}
+.people-grid > article:only-child {
+  max-width: none;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 0.4rem clamp(2rem, 6vw, 6rem);
+}
+.people-grid article > .eyebrow {
+  grid-row: 1;
+}
+.people-grid article > h2 {
+  grid-column: 1;
+}
+.people-grid article > p:last-child {
+  grid-column: 2;
+  grid-row: 1/3;
+  align-self: center;
+  font-size: 1.1rem;
+}
+.portfolio-section {
+  background: var(--white);
+}
+.portfolio-grid {
+  gap: clamp(2rem, 4vw, 4.5rem) clamp(1rem, 2vw, 2.5rem);
+}
+.photo-open {
+  overflow: hidden;
+}
+.photo-open .photo {
+  aspect-ratio: 4/4.8;
+  object-fit: cover;
+  object-position: center 25%;
+}
+.photo-open:hover .photo {
+  transform: scale(1.02);
+}
+.expand-photo {
+  background: var(--ivory);
+  color: var(--black);
+}
+.portfolio-grid figcaption {
+  border-top: 1px solid var(--line);
+  margin-top: 0.9rem;
+}
+.filter-list button,
+.music-tabs button {
+  border-radius: 0;
+}
+.quote-card {
+  border: none;
+  border-top: 2px solid var(--gold);
+}
+.contact-aside {
+  border-left: 1px solid var(--gold);
+  padding-inline-start: clamp(1.4rem, 3vw, 3rem);
+}
+.reading-column h2 {
+  border-top: 1px solid var(--line);
+  padding-top: 1.3rem;
+}
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes plate-appear {
+    from {
+      opacity: 0.65;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes menu-appear {
+    from {
+      opacity: 0.85;
+      transform: translateX(0.8rem);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  .index-plate .photo,
+  .branch-menu[open] > div {
+    animation: plate-appear 0.25s ease-out;
+  }
+  .mobile-menu[open] .mobile-menu-content {
+    animation: menu-appear 0.24s ease-out;
+  }
+  .photo-open .photo {
+    transition: transform 0.35s ease;
+  }
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 0.18s;
+  }
+}
+@view-transition {
+  navigation: auto;
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
+  }
+  .work-frame .photo,
+  .index-arrow,
+  .button span,
+  .text-link span,
+  .photo-open .photo {
+    transform: none !important;
+  }
+}
+@media (min-width: 1600px) {
+  .cinema-scene {
+    left: max(21%, calc((100vw - 1360px) / 2 + 12rem));
+  }
+}
+@media (max-width: 1023px) {
+  .header-inner {
+    min-height: 66px;
+  }
+  .house-grid {
+    gap: 2.5rem;
+  }
+  .cinema-inner {
+    min-height: clamp(530px, 75svh, 780px);
+  }
+  .service-grid article {
+    display: block;
+  }
+  .service-grid h3 {
+    margin-bottom: 0.65rem;
+  }
+}
+@media (max-width: 767px) {
+  .cinema-scene {
+    left: 6%;
+  }
+  .cinema h1 {
+    font-size: clamp(4.7rem, 11.8vw, 7rem);
+  }
+  .house-grid,
+  .process-layout {
+    grid-template-columns: 1fr;
+  }
+  .house-story {
+    max-width: 38rem;
+  }
+  .branch-index {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .index-plate {
+    display: none;
+  }
+  .index-link {
+    grid-template-columns: 4.8rem minmax(0, 1fr) auto;
+    padding: 0.8rem 1.1rem 0.8rem 0.8rem;
+  }
+  .index-thumb {
+    display: block;
+    height: 5.2rem;
+    overflow: hidden;
+  }
+  .index-thumb .photo {
+    height: 100%;
+    object-position: center 22%;
+  }
+  .index-link h3 {
+    font-size: 2rem;
+  }
+  .collection-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .collection-work:first-child {
+    grid-row: 1/3;
+    align-self: center;
+  }
+  .collection-work:nth-child(n + 2) {
+    margin-top: 0;
+  }
+  .collection-work:nth-child(3) .work-frame {
+    aspect-ratio: 1.28;
+  }
+  .branch-hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .branch-hero h1 {
+    font-size: clamp(2.65rem, 6.4vw, 4rem);
+  }
+  .chapter-cover {
+    min-height: 20rem;
+  }
+  .collection-work h3 {
+    font-size: 1.45rem;
+  }
+  .photo-masthead .masthead-grid {
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 1.2rem;
+  }
+  .photo-masthead h1 {
+    font-size: clamp(2.55rem, 5.9vw, 4rem);
+  }
+  .contact-aside {
+    border-left: 0;
+    padding-left: 0;
+  }
+}
+@media (max-width: 599px) {
+  .header-inner {
+    min-height: 62px;
+  }
+  .brand > img {
+    width: 33px;
+    height: 38px;
+  }
+  .brand > span {
+    font-size: 1.4rem;
+  }
+  .cinema-scene {
+    inset: -28px 0 15% 0;
+  }
+  .cinema-scene .photo {
+    object-position: 58% 26%;
+  }
+  .cinema::before {
+    background: linear-gradient(
+      0deg,
+      #171714 4%,
+      #171714f5 23%,
+      #171714d4 44%,
+      #17171435 76%,
+      #17171413 100%
+    );
+  }
+  .cinema-inner {
+    min-height: clamp(575px, 83svh, 790px);
+    align-content: end;
+    padding-block: 9rem 6rem;
+  }
+  .cinema-copy .eyebrow {
+    margin-bottom: 1.1rem;
+  }
+  .cinema h1 {
+    font-size: clamp(4.25rem, 16vw, 6.15rem);
+  }
+  .cinema-intro {
+    margin-top: 1.1rem;
+    max-width: 31ch;
+  }
+  .cinema .actions {
+    gap: 1.1rem;
+    margin-top: 1.3rem;
+  }
+  .cinema-foot {
+    bottom: 0.55rem;
+  }
+  .cinema-foot > span {
+    display: none;
+  }
+  .house-grid {
+    gap: 1.65rem;
+  }
+  .house-grid h2 br {
+    display: none;
+  }
+  .house-grid h2 {
+    max-width: 9ch;
+  }
+  .index-link {
+    gap: 0.65rem;
+  }
+  .index-link p {
+    font-size: 0.82rem;
+  }
+  .index-arrow {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  .collection-grid {
+    gap: 1.7rem 1rem;
+  }
+  .collection-work:first-child {
+    grid-column: 1/-1;
+    grid-row: auto;
+  }
+  .collection-work:first-child .work-frame {
+    aspect-ratio: 1.18;
+  }
+  .collection-work h3 {
+    font-size: 1.25rem;
+  }
+  .collection-work h3 span {
+    display: none;
+  }
+  .branch-hero-grid,
+  .photo-masthead .masthead-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .branch-hero-copy,
+  .branch-hero.theme-cerimonial .branch-hero-copy {
+    padding-block: 2.8rem 1.7rem;
+  }
+  .branch-hero-copy .lead {
+    margin-top: 1rem;
+  }
+  .chapter-cover {
+    min-height: 0;
+    aspect-ratio: 1.55;
+  }
+  .theme-musica .chapter-cover,
+  .theme-cerimonial .chapter-cover {
+    aspect-ratio: 1.12;
+  }
+  .theme-musica .chapter-cover,
+  .theme-buffet .chapter-cover {
+    border-left: 0;
+  }
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-grid article {
+    padding-block: 1.1rem;
+  }
+  .photo-masthead .masthead-copy {
+    padding-block: 2.65rem 1.7rem;
+  }
+  .masthead-image {
+    height: auto;
+    aspect-ratio: 2.25;
+  }
+  .people-grid > article:only-child {
+    display: block;
+  }
+  .people-grid article > p:last-child {
+    font-size: 1rem;
+  }
+  .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.7rem 0.85rem;
+  }
+  .portfolio-grid figure:first-child {
+    grid-column: 1/-1;
+  }
+  .portfolio-grid figure:first-child .photo {
+    aspect-ratio: 1.4;
+  }
+  .portfolio-grid h2 {
+    font-size: 1.28rem;
+  }
+  .expand-photo {
+    font-size: 0.67rem;
+    right: 0.4rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .theme-buffet .chapter-cover {
+    order: -1;
+    border: 0;
+    border-right: 1px solid var(--branch-detail);
+  }
+  .theme-decoracao .chapter-cover {
+    margin-block: clamp(1.5rem, 3vw, 3rem);
+    min-height: 23rem;
+  }
+  .theme-decoracao.branch-hero {
+    border-bottom: 1px solid var(--gold);
+  }
+}
+@media (max-width: 767px) {
+  .story-film {
+    grid-template-columns: 1fr;
+  }
+}

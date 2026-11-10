@@ -1,0 +1,122 @@
+{
+  "musical-violino-ao-ar-livre": {
+    "width": 2268,
+    "height": 4032,
+    "files": [
+      {
+        "src": "/media/musical-violino-ao-ar-livre-360.webp",
+        "width": 360,
+        "height": 640,
+        "bytes": 39618
+      },
+      {
+        "src": "/media/musical-violino-ao-ar-livre-720.webp",
+        "width": 720,
+        "height": 1280,
+        "bytes": 100122
+      },
+      {
+        "src": "/media/musical-violino-ao-ar-livre-1080.webp",
+        "width": 1080,
+        "height": 1920,
+        "bytes": 180766
+      }
+    ]
+  },
+  "musical-teclado-ao-ar-livre": {
+    "width": 3213,
+    "height": 5712,
+    "files": [
+      {
+        "src": "/media/musical-teclado-ao-ar-livre-360.webp",
+        "width": 360,
+        "height": 640,
+        "bytes": 30820
+      },
+      {
+        "src": "/media/musical-teclado-ao-ar-livre-720.webp",
+        "width": 720,
+        "height": 1280,
+        "bytes": 71398
+      },
+      {
+        "src": "/media/musical-teclado-ao-ar-livre-1080.webp",
+        "width": 1080,
+        "height": 1920,
+        "bytes": 117770
+      }
+    ]
+  },
+  "musical-voz-jardim": {
+    "width": 614,
+    "height": 990,
+    "files": [
+      {
+        "src": "/media/musical-voz-jardim-360.webp",
+        "width": 360,
+        "height": 580,
+        "bytes": 62370
+      },
+      {
+        "src": "/media/musical-voz-jardim-614.webp",
+        "width": 614,
+        "height": 990,
+        "bytes": 122064
+      }
+    ]
+  },
+  "musical-voz-e-violino": {
+    "width": 812,
+    "height": 939,
+    "files": [
+      {
+        "src": "/media/musical-voz-e-violino-360.webp",
+        "width": 360,
+        "height": 416,
+        "bytes": 21858
+      },
+      {
+        "src": "/media/musical-voz-e-violino-720.webp",
+        "width": 720,
+        "height": 833,
+        "bytes": 48684
+      },
+      {
+        "src": "/media/musical-voz-e-violino-812.webp",
+        "width": 812,
+        "height": 939,
+        "bytes": 55254
+      }
+    ]
+  },
+  "musical-flauta": {
+    "width": 665,
+    "height": 1182,
+    "files": [
+      {
+        "src": "/media/musical-flauta-360.webp",
+        "width": 360,
+        "height": 640,
+        "bytes": 67494
+      },
+      {
+        "src": "/media/musical-flauta-665.webp",
+        "width": 665,
+        "height": 1182,
+        "bytes": 191194
+      }
+    ]
+  },
+  "musical-formacao-externa": {
+    "width": 311,
+    "height": 553,
+    "files": [
+      {
+        "src": "/media/musical-formacao-externa-311.webp",
+        "width": 311,
+        "height": 553,
+        "bytes": 39860
+      }
+    ]
+  }
+}
