@@ -3,13 +3,11 @@
 import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 import { Frame, SectionHeading } from "./components";
 import { portfolio } from "./content";
+import { FilmGrid } from "./film";
+import { musicalFilms, musicalPhotos } from "./gallery";
 
 const newPhotos = [
-  [
-    "musical-quarteto",
-    "Quarteto em cerimônia",
-    "Quatro músicos do Grupo Toccante, com voz, violão, teclado e violino, diante de um arco de flores.",
-  ],
+  ...musicalPhotos.map((p) => [p.image, p.title, p.alt] as const),
   [
     "musical-violino-ao-ar-livre",
     "Violino ao ar livre",
@@ -129,10 +127,7 @@ export default function MusicalMedia({
           tabIndex={0}
         >
           <div className="masonry music-gallery" data-reveal-group="">
-            {[
-              ...newPhotos,
-              ...existing.filter(([n]) => n !== "musical-quarteto"),
-            ].map(([name, title, alt]) => (
+            {[...newPhotos, ...existing].map(([name, title, alt]) => (
               <figure key={name}>
                 <Frame
                   name={name}
@@ -152,35 +147,7 @@ export default function MusicalMedia({
           hidden={active !== "videos"}
           tabIndex={0}
         >
-          <figure className="music-video">
-            <div className="frame frame-soft">
-              {/* O vídeo original não possui arquivo de legendas. */}
-              {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-              <video
-                controls
-                playsInline
-                preload="none"
-                poster="/media/musical-apresentacao-poster-900.webp"
-                width="720"
-                height="1280"
-                aria-label="Vídeo do Toccante Musical em um casamento ao ar livre."
-              >
-                <source
-                  src="/media/musical-apresentacao.mp4"
-                  type="video/mp4"
-                />
-                <a href="/media/musical-apresentacao.mp4">Abrir o vídeo</a>
-              </video>
-            </div>
-            <figcaption>
-              <p className="eyebrow">Toccante Musical</p>
-              <h3>A música em uma cerimônia ao ar livre.</h3>
-              <p>
-                Um registro da equipe em um casamento, da preparação do espaço
-                ao momento dos noivos.
-              </p>
-            </figcaption>
-          </figure>
+          <FilmGrid items={musicalFilms} active={active === "videos"} />
         </div>
       </div>
     </section>

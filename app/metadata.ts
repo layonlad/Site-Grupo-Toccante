@@ -10,15 +10,15 @@ export function metadataFor(page: string): Metadata {
     };
   const url = page === "inicio" ? site.origin : `${site.origin}/${page}`;
   const branch = branches.find((item) => item.key === page);
-  const name = branch?.image ?? "decoracao-mesa-bolo";
-  const photo = photographs[name]!.files.at(-1)!;
+  const name = branch?.image ?? "decoracao-girassois-jardim";
+  const photo = photographs[name]!.files.findLast((f) => f.width <= 1600)!;
   const image = {
     url: site.origin + photo.src,
     width: photo.width,
     height: photo.height,
     alt:
       branch?.alt ??
-      "Mesa de bolo e flores em uma celebração do Grupo Toccante.",
+      "Mesa do bolo com girassóis em uma celebração do Grupo Toccante.",
   };
   return {
     title: page === "inicio" ? { absolute: data.title } : data.title,

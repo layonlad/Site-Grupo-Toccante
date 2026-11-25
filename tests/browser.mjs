@@ -25,6 +25,8 @@ const routes = [
   "/decoracao",
   "/cerimonial",
   "/equipe",
+  "/noivos",
+  "/depoimentos",
   "/portfolio",
   "/contato",
   "/privacidade",
@@ -102,10 +104,10 @@ assert.ok(
 );
 await page.goto(base + "/portfolio?vertente=musica");
 await page.waitForFunction(
-  () => document.querySelectorAll(".portfolio-grid figure").length === 4,
+  () => document.querySelectorAll(".portfolio-grid figure").length === 10,
 );
 await page.getByRole("button", { name: "Buffet", exact: true }).click();
-assert.equal(await page.locator(".portfolio-grid figure").count(), 14);
+assert.equal(await page.locator(".portfolio-grid figure").count(), 23);
 await page
   .getByRole("button", { name: /Ampliar fotografia/ })
   .first()

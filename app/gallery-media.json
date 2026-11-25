@@ -1,0 +1,1892 @@
+{
+  "buffet-mesa-antepastos": {
+    "width": 1066,
+    "height": 1600,
+    "files": [
+      {
+        "src": "/media/buffet-mesa-antepastos-480.webp",
+        "width": 480,
+        "height": 720,
+        "bytes": 38916
+      },
+      {
+        "src": "/media/buffet-mesa-antepastos-960.webp",
+        "width": 960,
+        "height": 1441,
+        "bytes": 88810
+      },
+      {
+        "src": "/media/buffet-mesa-antepastos-1066.webp",
+        "width": 1066,
+        "height": 1600,
+        "bytes": 100356
+      }
+    ]
+  },
+  "buffet-coxinhas-servico": {
+    "width": 3024,
+    "height": 4032,
+    "files": [
+      {
+        "src": "/media/buffet-coxinhas-servico-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 37990
+      },
+      {
+        "src": "/media/buffet-coxinhas-servico-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 120864
+      },
+      {
+        "src": "/media/buffet-coxinhas-servico-1600.webp",
+        "width": 1600,
+        "height": 2133,
+        "bytes": 310524
+      },
+      {
+        "src": "/media/buffet-coxinhas-servico-2400.webp",
+        "width": 2400,
+        "height": 3200,
+        "bytes": 584656
+      }
+    ]
+  },
+  "buffet-ilha-rustica": {
+    "width": 3024,
+    "height": 4032,
+    "files": [
+      {
+        "src": "/media/buffet-ilha-rustica-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 59336
+      },
+      {
+        "src": "/media/buffet-ilha-rustica-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 194922
+      },
+      {
+        "src": "/media/buffet-ilha-rustica-1600.webp",
+        "width": 1600,
+        "height": 2133,
+        "bytes": 449422
+      },
+      {
+        "src": "/media/buffet-ilha-rustica-2400.webp",
+        "width": 2400,
+        "height": 3200,
+        "bytes": 796156
+      }
+    ]
+  },
+  "buffet-coxinhas-bandeja": {
+    "width": 3024,
+    "height": 4032,
+    "files": [
+      {
+        "src": "/media/buffet-coxinhas-bandeja-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 39898
+      },
+      {
+        "src": "/media/buffet-coxinhas-bandeja-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 117328
+      },
+      {
+        "src": "/media/buffet-coxinhas-bandeja-1600.webp",
+        "width": 1600,
+        "height": 2133,
+        "bytes": 275672
+      },
+      {
+        "src": "/media/buffet-coxinhas-bandeja-2400.webp",
+        "width": 2400,
+        "height": 3200,
+        "bytes": 600972
+      }
+    ]
+  },
+  "buffet-mesa-recepcao": {
+    "width": 1600,
+    "height": 1066,
+    "files": [
+      {
+        "src": "/media/buffet-mesa-recepcao-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 21898
+      },
+      {
+        "src": "/media/buffet-mesa-recepcao-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 59026
+      },
+      {
+        "src": "/media/buffet-mesa-recepcao-1600.webp",
+        "width": 1600,
+        "height": 1066,
+        "bytes": 116462
+      }
+    ]
+  },
+  "buffet-tortinhas-detalhe": {
+    "width": 3024,
+    "height": 4032,
+    "files": [
+      {
+        "src": "/media/buffet-tortinhas-detalhe-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 37850
+      },
+      {
+        "src": "/media/buffet-tortinhas-detalhe-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 96856
+      },
+      {
+        "src": "/media/buffet-tortinhas-detalhe-1600.webp",
+        "width": 1600,
+        "height": 2133,
+        "bytes": 217052
+      },
+      {
+        "src": "/media/buffet-tortinhas-detalhe-2400.webp",
+        "width": 2400,
+        "height": 3200,
+        "bytes": 452708
+      }
+    ]
+  },
+  "buffet-coxinhas-sorriso": {
+    "width": 3024,
+    "height": 4032,
+    "files": [
+      {
+        "src": "/media/buffet-coxinhas-sorriso-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 39796
+      },
+      {
+        "src": "/media/buffet-coxinhas-sorriso-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 125156
+      },
+      {
+        "src": "/media/buffet-coxinhas-sorriso-1600.webp",
+        "width": 1600,
+        "height": 2133,
+        "bytes": 308756
+      },
+      {
+        "src": "/media/buffet-coxinhas-sorriso-2400.webp",
+        "width": 2400,
+        "height": 3200,
+        "bytes": 573020
+      }
+    ]
+  },
+  "buffet-ilha-samambaia": {
+    "width": 3024,
+    "height": 4032,
+    "files": [
+      {
+        "src": "/media/buffet-ilha-samambaia-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 63530
+      },
+      {
+        "src": "/media/buffet-ilha-samambaia-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 209616
+      },
+      {
+        "src": "/media/buffet-ilha-samambaia-1600.webp",
+        "width": 1600,
+        "height": 2133,
+        "bytes": 481982
+      },
+      {
+        "src": "/media/buffet-ilha-samambaia-2400.webp",
+        "width": 2400,
+        "height": 3200,
+        "bytes": 847772
+      }
+    ]
+  },
+  "buffet-coxinhas-apresentacao": {
+    "width": 3024,
+    "height": 4032,
+    "files": [
+      {
+        "src": "/media/buffet-coxinhas-apresentacao-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 42198
+      },
+      {
+        "src": "/media/buffet-coxinhas-apresentacao-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 147454
+      },
+      {
+        "src": "/media/buffet-coxinhas-apresentacao-1600.webp",
+        "width": 1600,
+        "height": 2133,
+        "bytes": 356402
+      },
+      {
+        "src": "/media/buffet-coxinhas-apresentacao-2400.webp",
+        "width": 2400,
+        "height": 3200,
+        "bytes": 697168
+      }
+    ]
+  },
+  "buffet-frios-camadas": {
+    "width": 1066,
+    "height": 1600,
+    "files": [
+      {
+        "src": "/media/buffet-frios-camadas-480.webp",
+        "width": 480,
+        "height": 720,
+        "bytes": 34722
+      },
+      {
+        "src": "/media/buffet-frios-camadas-960.webp",
+        "width": 960,
+        "height": 1441,
+        "bytes": 78582
+      },
+      {
+        "src": "/media/buffet-frios-camadas-1066.webp",
+        "width": 1066,
+        "height": 1600,
+        "bytes": 91462
+      }
+    ]
+  },
+  "buffet-tortinhas-bandeja": {
+    "width": 3024,
+    "height": 4032,
+    "files": [
+      {
+        "src": "/media/buffet-tortinhas-bandeja-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 48638
+      },
+      {
+        "src": "/media/buffet-tortinhas-bandeja-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 140170
+      },
+      {
+        "src": "/media/buffet-tortinhas-bandeja-1600.webp",
+        "width": 1600,
+        "height": 2133,
+        "bytes": 328320
+      },
+      {
+        "src": "/media/buffet-tortinhas-bandeja-2400.webp",
+        "width": 2400,
+        "height": 3200,
+        "bytes": 663926
+      }
+    ]
+  },
+  "buffet-espetinhos": {
+    "width": 3024,
+    "height": 4032,
+    "files": [
+      {
+        "src": "/media/buffet-espetinhos-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 63760
+      },
+      {
+        "src": "/media/buffet-espetinhos-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 177086
+      },
+      {
+        "src": "/media/buffet-espetinhos-1600.webp",
+        "width": 1600,
+        "height": 2133,
+        "bytes": 392956
+      },
+      {
+        "src": "/media/buffet-espetinhos-2400.webp",
+        "width": 2400,
+        "height": 3200,
+        "bytes": 711038
+      }
+    ]
+  },
+  "buffet-ilha-panelas": {
+    "width": 3024,
+    "height": 4032,
+    "files": [
+      {
+        "src": "/media/buffet-ilha-panelas-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 61944
+      },
+      {
+        "src": "/media/buffet-ilha-panelas-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 194828
+      },
+      {
+        "src": "/media/buffet-ilha-panelas-1600.webp",
+        "width": 1600,
+        "height": 2133,
+        "bytes": 438446
+      },
+      {
+        "src": "/media/buffet-ilha-panelas-2400.webp",
+        "width": 2400,
+        "height": 3200,
+        "bytes": 788844
+      }
+    ]
+  },
+  "buffet-panelas-ferro": {
+    "width": 1066,
+    "height": 1600,
+    "files": [
+      {
+        "src": "/media/buffet-panelas-ferro-480.webp",
+        "width": 480,
+        "height": 720,
+        "bytes": 41572
+      },
+      {
+        "src": "/media/buffet-panelas-ferro-960.webp",
+        "width": 960,
+        "height": 1441,
+        "bytes": 93732
+      },
+      {
+        "src": "/media/buffet-panelas-ferro-1066.webp",
+        "width": 1066,
+        "height": 1600,
+        "bytes": 107450
+      }
+    ]
+  },
+  "buffet-mesa-frios-flores": {
+    "width": 1066,
+    "height": 1600,
+    "files": [
+      {
+        "src": "/media/buffet-mesa-frios-flores-480.webp",
+        "width": 480,
+        "height": 720,
+        "bytes": 33272
+      },
+      {
+        "src": "/media/buffet-mesa-frios-flores-960.webp",
+        "width": 960,
+        "height": 1441,
+        "bytes": 72668
+      },
+      {
+        "src": "/media/buffet-mesa-frios-flores-1066.webp",
+        "width": 1066,
+        "height": 1600,
+        "bytes": 86594
+      }
+    ]
+  },
+  "decoracao-mesa-bolo-branca": {
+    "width": 1280,
+    "height": 852,
+    "files": [
+      {
+        "src": "/media/decoracao-mesa-bolo-branca-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 35720
+      },
+      {
+        "src": "/media/decoracao-mesa-bolo-branca-960.webp",
+        "width": 960,
+        "height": 639,
+        "bytes": 119456
+      },
+      {
+        "src": "/media/decoracao-mesa-bolo-branca-1280.webp",
+        "width": 1280,
+        "height": 852,
+        "bytes": 185600
+      }
+    ]
+  },
+  "decoracao-quinze-anos-doces": {
+    "width": 3120,
+    "height": 4160,
+    "files": [
+      {
+        "src": "/media/decoracao-quinze-anos-doces-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 79926
+      },
+      {
+        "src": "/media/decoracao-quinze-anos-doces-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 249494
+      },
+      {
+        "src": "/media/decoracao-quinze-anos-doces-1600.webp",
+        "width": 1600,
+        "height": 2133,
+        "bytes": 520840
+      },
+      {
+        "src": "/media/decoracao-quinze-anos-doces-2400.webp",
+        "width": 2400,
+        "height": 3200,
+        "bytes": 876438
+      }
+    ]
+  },
+  "decoracao-doces-flores-brancas": {
+    "width": 1280,
+    "height": 852,
+    "files": [
+      {
+        "src": "/media/decoracao-doces-flores-brancas-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 59546
+      },
+      {
+        "src": "/media/decoracao-doces-flores-brancas-960.webp",
+        "width": 960,
+        "height": 639,
+        "bytes": 176620
+      },
+      {
+        "src": "/media/decoracao-doces-flores-brancas-1280.webp",
+        "width": 1280,
+        "height": 852,
+        "bytes": 254202
+      }
+    ]
+  },
+  "decoracao-docinhos-bandeja": {
+    "width": 1280,
+    "height": 852,
+    "files": [
+      {
+        "src": "/media/decoracao-docinhos-bandeja-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 27584
+      },
+      {
+        "src": "/media/decoracao-docinhos-bandeja-960.webp",
+        "width": 960,
+        "height": 639,
+        "bytes": 73540
+      },
+      {
+        "src": "/media/decoracao-docinhos-bandeja-1280.webp",
+        "width": 1280,
+        "height": 852,
+        "bytes": 106126
+      }
+    ]
+  },
+  "decoracao-altar-igreja": {
+    "width": 1280,
+    "height": 852,
+    "files": [
+      {
+        "src": "/media/decoracao-altar-igreja-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 37860
+      },
+      {
+        "src": "/media/decoracao-altar-igreja-960.webp",
+        "width": 960,
+        "height": 639,
+        "bytes": 112226
+      },
+      {
+        "src": "/media/decoracao-altar-igreja-1280.webp",
+        "width": 1280,
+        "height": 852,
+        "bytes": 168898
+      }
+    ]
+  },
+  "decoracao-mesa-bolo-lirios": {
+    "width": 1280,
+    "height": 852,
+    "files": [
+      {
+        "src": "/media/decoracao-mesa-bolo-lirios-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 45550
+      },
+      {
+        "src": "/media/decoracao-mesa-bolo-lirios-960.webp",
+        "width": 960,
+        "height": 639,
+        "bytes": 136624
+      },
+      {
+        "src": "/media/decoracao-mesa-bolo-lirios-1280.webp",
+        "width": 1280,
+        "height": 852,
+        "bytes": 202100
+      }
+    ]
+  },
+  "decoracao-centro-mesa": {
+    "width": 960,
+    "height": 1280,
+    "files": [
+      {
+        "src": "/media/decoracao-centro-mesa-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 58526
+      },
+      {
+        "src": "/media/decoracao-centro-mesa-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 169986
+      }
+    ]
+  },
+  "decoracao-quinze-anos-lustre": {
+    "width": 1280,
+    "height": 960,
+    "files": [
+      {
+        "src": "/media/decoracao-quinze-anos-lustre-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 37302
+      },
+      {
+        "src": "/media/decoracao-quinze-anos-lustre-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 104086
+      },
+      {
+        "src": "/media/decoracao-quinze-anos-lustre-1280.webp",
+        "width": 1280,
+        "height": 960,
+        "bytes": 150210
+      }
+    ]
+  },
+  "decoracao-chocolates": {
+    "width": 852,
+    "height": 1280,
+    "files": [
+      {
+        "src": "/media/decoracao-chocolates-480.webp",
+        "width": 480,
+        "height": 721,
+        "bytes": 63006
+      },
+      {
+        "src": "/media/decoracao-chocolates-852.webp",
+        "width": 852,
+        "height": 1280,
+        "bytes": 132854
+      }
+    ]
+  },
+  "decoracao-bolo-floral": {
+    "width": 852,
+    "height": 1280,
+    "files": [
+      {
+        "src": "/media/decoracao-bolo-floral-480.webp",
+        "width": 480,
+        "height": 721,
+        "bytes": 65618
+      },
+      {
+        "src": "/media/decoracao-bolo-floral-852.webp",
+        "width": 852,
+        "height": 1280,
+        "bytes": 130976
+      }
+    ]
+  },
+  "decoracao-bolo-entre-flores": {
+    "width": 1280,
+    "height": 852,
+    "files": [
+      {
+        "src": "/media/decoracao-bolo-entre-flores-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 35008
+      },
+      {
+        "src": "/media/decoracao-bolo-entre-flores-960.webp",
+        "width": 960,
+        "height": 639,
+        "bytes": 89256
+      },
+      {
+        "src": "/media/decoracao-bolo-entre-flores-1280.webp",
+        "width": 1280,
+        "height": 852,
+        "bytes": 127822
+      }
+    ]
+  },
+  "decoracao-noivos-bolo": {
+    "width": 1280,
+    "height": 852,
+    "files": [
+      {
+        "src": "/media/decoracao-noivos-bolo-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 33650
+      },
+      {
+        "src": "/media/decoracao-noivos-bolo-960.webp",
+        "width": 960,
+        "height": 639,
+        "bytes": 95612
+      },
+      {
+        "src": "/media/decoracao-noivos-bolo-1280.webp",
+        "width": 1280,
+        "height": 852,
+        "bytes": 140068
+      }
+    ]
+  },
+  "decoracao-bombons": {
+    "width": 852,
+    "height": 1280,
+    "files": [
+      {
+        "src": "/media/decoracao-bombons-480.webp",
+        "width": 480,
+        "height": 721,
+        "bytes": 58270
+      },
+      {
+        "src": "/media/decoracao-bombons-852.webp",
+        "width": 852,
+        "height": 1280,
+        "bytes": 118264
+      }
+    ]
+  },
+  "decoracao-fotos-familia": {
+    "width": 852,
+    "height": 1280,
+    "files": [
+      {
+        "src": "/media/decoracao-fotos-familia-480.webp",
+        "width": 480,
+        "height": 721,
+        "bytes": 40970
+      },
+      {
+        "src": "/media/decoracao-fotos-familia-852.webp",
+        "width": 852,
+        "height": 1280,
+        "bytes": 86152
+      }
+    ]
+  },
+  "decoracao-capela-noite": {
+    "width": 960,
+    "height": 1280,
+    "files": [
+      {
+        "src": "/media/decoracao-capela-noite-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 54048
+      },
+      {
+        "src": "/media/decoracao-capela-noite-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 170002
+      }
+    ]
+  },
+  "decoracao-mesa-bolo-ampla": {
+    "width": 1280,
+    "height": 852,
+    "files": [
+      {
+        "src": "/media/decoracao-mesa-bolo-ampla-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 46878
+      },
+      {
+        "src": "/media/decoracao-mesa-bolo-ampla-960.webp",
+        "width": 960,
+        "height": 639,
+        "bytes": 145470
+      },
+      {
+        "src": "/media/decoracao-mesa-bolo-ampla-1280.webp",
+        "width": 1280,
+        "height": 852,
+        "bytes": 219338
+      }
+    ]
+  },
+  "decoracao-girassois-montagem": {
+    "width": 4536,
+    "height": 8064,
+    "files": [
+      {
+        "src": "/media/decoracao-girassois-montagem-480.webp",
+        "width": 480,
+        "height": 853,
+        "bytes": 146480
+      },
+      {
+        "src": "/media/decoracao-girassois-montagem-960.webp",
+        "width": 960,
+        "height": 1707,
+        "bytes": 475934
+      },
+      {
+        "src": "/media/decoracao-girassois-montagem-1600.webp",
+        "width": 1600,
+        "height": 2844,
+        "bytes": 1003452
+      },
+      {
+        "src": "/media/decoracao-girassois-montagem-2400.webp",
+        "width": 2400,
+        "height": 4267,
+        "bytes": 1617346
+      }
+    ]
+  },
+  "decoracao-girassois-jardim": {
+    "width": 6048,
+    "height": 6048,
+    "files": [
+      {
+        "src": "/media/decoracao-girassois-jardim-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 77652
+      },
+      {
+        "src": "/media/decoracao-girassois-jardim-960.webp",
+        "width": 960,
+        "height": 960,
+        "bytes": 255978
+      },
+      {
+        "src": "/media/decoracao-girassois-jardim-1600.webp",
+        "width": 1600,
+        "height": 1600,
+        "bytes": 562110
+      },
+      {
+        "src": "/media/decoracao-girassois-jardim-2400.webp",
+        "width": 2400,
+        "height": 2400,
+        "bytes": 936714
+      }
+    ]
+  },
+  "decoracao-bolo-rosas": {
+    "width": 854,
+    "height": 1280,
+    "files": [
+      {
+        "src": "/media/decoracao-bolo-rosas-480.webp",
+        "width": 480,
+        "height": 719,
+        "bytes": 72254
+      },
+      {
+        "src": "/media/decoracao-bolo-rosas-854.webp",
+        "width": 854,
+        "height": 1280,
+        "bytes": 143982
+      }
+    ]
+  },
+  "decoracao-capela-luzes": {
+    "width": 960,
+    "height": 1280,
+    "files": [
+      {
+        "src": "/media/decoracao-capela-luzes-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 54906
+      },
+      {
+        "src": "/media/decoracao-capela-luzes-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 178258
+      }
+    ]
+  },
+  "decoracao-cerimonia-lago": {
+    "width": 996,
+    "height": 1280,
+    "files": [
+      {
+        "src": "/media/decoracao-cerimonia-lago-480.webp",
+        "width": 480,
+        "height": 617,
+        "bytes": 81814
+      },
+      {
+        "src": "/media/decoracao-cerimonia-lago-960.webp",
+        "width": 960,
+        "height": 1234,
+        "bytes": 205404
+      },
+      {
+        "src": "/media/decoracao-cerimonia-lago-996.webp",
+        "width": 996,
+        "height": 1280,
+        "bytes": 207492
+      }
+    ]
+  },
+  "decoracao-capela-arco": {
+    "width": 960,
+    "height": 1280,
+    "files": [
+      {
+        "src": "/media/decoracao-capela-arco-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 75716
+      },
+      {
+        "src": "/media/decoracao-capela-arco-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 234528
+      }
+    ]
+  },
+  "decoracao-docinhos-castanhas": {
+    "width": 852,
+    "height": 1280,
+    "files": [
+      {
+        "src": "/media/decoracao-docinhos-castanhas-480.webp",
+        "width": 480,
+        "height": 721,
+        "bytes": 45440
+      },
+      {
+        "src": "/media/decoracao-docinhos-castanhas-852.webp",
+        "width": 852,
+        "height": 1280,
+        "bytes": 88508
+      }
+    ]
+  },
+  "decoracao-quinze-anos-bolo": {
+    "width": 3024,
+    "height": 4032,
+    "files": [
+      {
+        "src": "/media/decoracao-quinze-anos-bolo-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 69208
+      },
+      {
+        "src": "/media/decoracao-quinze-anos-bolo-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 211646
+      },
+      {
+        "src": "/media/decoracao-quinze-anos-bolo-1600.webp",
+        "width": 1600,
+        "height": 2133,
+        "bytes": 462016
+      },
+      {
+        "src": "/media/decoracao-quinze-anos-bolo-2400.webp",
+        "width": 2400,
+        "height": 3200,
+        "bytes": 835482
+      }
+    ]
+  },
+  "decoracao-quinze-anos-mesa": {
+    "width": 4032,
+    "height": 3024,
+    "files": [
+      {
+        "src": "/media/decoracao-quinze-anos-mesa-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 36186
+      },
+      {
+        "src": "/media/decoracao-quinze-anos-mesa-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 122562
+      },
+      {
+        "src": "/media/decoracao-quinze-anos-mesa-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 285326
+      },
+      {
+        "src": "/media/decoracao-quinze-anos-mesa-2400.webp",
+        "width": 2400,
+        "height": 1800,
+        "bytes": 544794
+      }
+    ]
+  },
+  "decoracao-mesa-cafe": {
+    "width": 1280,
+    "height": 852,
+    "files": [
+      {
+        "src": "/media/decoracao-mesa-cafe-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 31330
+      },
+      {
+        "src": "/media/decoracao-mesa-cafe-960.webp",
+        "width": 960,
+        "height": 639,
+        "bytes": 86082
+      },
+      {
+        "src": "/media/decoracao-mesa-cafe-1280.webp",
+        "width": 1280,
+        "height": 852,
+        "bytes": 125438
+      }
+    ]
+  },
+  "decoracao-quinze-anos-borboleta": {
+    "width": 3024,
+    "height": 4032,
+    "files": [
+      {
+        "src": "/media/decoracao-quinze-anos-borboleta-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 69878
+      },
+      {
+        "src": "/media/decoracao-quinze-anos-borboleta-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 212510
+      },
+      {
+        "src": "/media/decoracao-quinze-anos-borboleta-1600.webp",
+        "width": 1600,
+        "height": 2133,
+        "bytes": 454568
+      },
+      {
+        "src": "/media/decoracao-quinze-anos-borboleta-2400.webp",
+        "width": 2400,
+        "height": 3200,
+        "bytes": 805880
+      }
+    ]
+  },
+  "musical-formacao-entardecer": {
+    "width": 8064,
+    "height": 4536,
+    "files": [
+      {
+        "src": "/media/musical-formacao-entardecer-480.webp",
+        "width": 480,
+        "height": 270,
+        "bytes": 37954
+      },
+      {
+        "src": "/media/musical-formacao-entardecer-960.webp",
+        "width": 960,
+        "height": 540,
+        "bytes": 135574
+      },
+      {
+        "src": "/media/musical-formacao-entardecer-1600.webp",
+        "width": 1600,
+        "height": 900,
+        "bytes": 332098
+      },
+      {
+        "src": "/media/musical-formacao-entardecer-2400.webp",
+        "width": 2400,
+        "height": 1350,
+        "bytes": 604160
+      }
+    ]
+  },
+  "musical-violao": {
+    "width": 3213,
+    "height": 5712,
+    "files": [
+      {
+        "src": "/media/musical-violao-480.webp",
+        "width": 480,
+        "height": 853,
+        "bytes": 47468
+      },
+      {
+        "src": "/media/musical-violao-960.webp",
+        "width": 960,
+        "height": 1707,
+        "bytes": 121554
+      },
+      {
+        "src": "/media/musical-violao-1600.webp",
+        "width": 1600,
+        "height": 2844,
+        "bytes": 226138
+      },
+      {
+        "src": "/media/musical-violao-2400.webp",
+        "width": 2400,
+        "height": 4267,
+        "bytes": 380850
+      }
+    ]
+  },
+  "musical-violino-a-sombra": {
+    "width": 4284,
+    "height": 4284,
+    "files": [
+      {
+        "src": "/media/musical-violino-a-sombra-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 57708
+      },
+      {
+        "src": "/media/musical-violino-a-sombra-960.webp",
+        "width": 960,
+        "height": 960,
+        "bytes": 156082
+      },
+      {
+        "src": "/media/musical-violino-a-sombra-1600.webp",
+        "width": 1600,
+        "height": 1600,
+        "bytes": 289366
+      },
+      {
+        "src": "/media/musical-violino-a-sombra-2400.webp",
+        "width": 2400,
+        "height": 2400,
+        "bytes": 447346
+      }
+    ]
+  },
+  "musical-duo-vozes": {
+    "width": 728,
+    "height": 1280,
+    "files": [
+      {
+        "src": "/media/musical-duo-vozes-480.webp",
+        "width": 480,
+        "height": 844,
+        "bytes": 91078
+      },
+      {
+        "src": "/media/musical-duo-vozes-728.webp",
+        "width": 728,
+        "height": 1280,
+        "bytes": 153470
+      }
+    ]
+  },
+  "musical-violino-violoncelo": {
+    "width": 1086,
+    "height": 1448,
+    "files": [
+      {
+        "src": "/media/musical-violino-violoncelo-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 84998
+      },
+      {
+        "src": "/media/musical-violino-violoncelo-960.webp",
+        "width": 960,
+        "height": 1280,
+        "bytes": 252870
+      },
+      {
+        "src": "/media/musical-violino-violoncelo-1086.webp",
+        "width": 1086,
+        "height": 1448,
+        "bytes": 298870
+      }
+    ]
+  },
+  "musical-tecnico-som": {
+    "width": 3213,
+    "height": 5712,
+    "files": [
+      {
+        "src": "/media/musical-tecnico-som-480.webp",
+        "width": 480,
+        "height": 853,
+        "bytes": 31946
+      },
+      {
+        "src": "/media/musical-tecnico-som-960.webp",
+        "width": 960,
+        "height": 1707,
+        "bytes": 72910
+      },
+      {
+        "src": "/media/musical-tecnico-som-1600.webp",
+        "width": 1600,
+        "height": 2844,
+        "bytes": 137052
+      },
+      {
+        "src": "/media/musical-tecnico-som-2400.webp",
+        "width": 2400,
+        "height": 4267,
+        "bytes": 237280
+      }
+    ]
+  },
+  "equipe-ceo": {
+    "width": 1365,
+    "height": 2048,
+    "files": [
+      {
+        "src": "/media/equipe-ceo-480.webp",
+        "width": 480,
+        "height": 720,
+        "bytes": 23218
+      },
+      {
+        "src": "/media/equipe-ceo-960.webp",
+        "width": 960,
+        "height": 1440,
+        "bytes": 61930
+      },
+      {
+        "src": "/media/equipe-ceo-1365.webp",
+        "width": 1365,
+        "height": 2048,
+        "bytes": 112568
+      }
+    ]
+  },
+  "equipe-socios": {
+    "width": 2048,
+    "height": 1638,
+    "files": [
+      {
+        "src": "/media/equipe-socios-480.webp",
+        "width": 480,
+        "height": 384,
+        "bytes": 15906
+      },
+      {
+        "src": "/media/equipe-socios-960.webp",
+        "width": 960,
+        "height": 768,
+        "bytes": 40994
+      },
+      {
+        "src": "/media/equipe-socios-1600.webp",
+        "width": 1600,
+        "height": 1280,
+        "bytes": 84468
+      },
+      {
+        "src": "/media/equipe-socios-2048.webp",
+        "width": 2048,
+        "height": 1638,
+        "bytes": 128956
+      }
+    ]
+  },
+  "equipe-chef": {
+    "width": 1365,
+    "height": 2048,
+    "files": [
+      {
+        "src": "/media/equipe-chef-480.webp",
+        "width": 480,
+        "height": 720,
+        "bytes": 16686
+      },
+      {
+        "src": "/media/equipe-chef-960.webp",
+        "width": 960,
+        "height": 1440,
+        "bytes": 44150
+      },
+      {
+        "src": "/media/equipe-chef-1365.webp",
+        "width": 1365,
+        "height": 2048,
+        "bytes": 76856
+      }
+    ]
+  },
+  "equipe-cozinha": {
+    "width": 2048,
+    "height": 1365,
+    "files": [
+      {
+        "src": "/media/equipe-cozinha-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 14174
+      },
+      {
+        "src": "/media/equipe-cozinha-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 35896
+      },
+      {
+        "src": "/media/equipe-cozinha-1600.webp",
+        "width": 1600,
+        "height": 1066,
+        "bytes": 74378
+      },
+      {
+        "src": "/media/equipe-cozinha-2048.webp",
+        "width": 2048,
+        "height": 1365,
+        "bytes": 108956
+      }
+    ]
+  },
+  "equipe-buffet-utensilios": {
+    "width": 2048,
+    "height": 1365,
+    "files": [
+      {
+        "src": "/media/equipe-buffet-utensilios-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 16738
+      },
+      {
+        "src": "/media/equipe-buffet-utensilios-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 43562
+      },
+      {
+        "src": "/media/equipe-buffet-utensilios-1600.webp",
+        "width": 1600,
+        "height": 1066,
+        "bytes": 86462
+      },
+      {
+        "src": "/media/equipe-buffet-utensilios-2048.webp",
+        "width": 2048,
+        "height": 1365,
+        "bytes": 125696
+      }
+    ]
+  },
+  "equipe-musical-formacao": {
+    "width": 2048,
+    "height": 1365,
+    "files": [
+      {
+        "src": "/media/equipe-musical-formacao-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 19646
+      },
+      {
+        "src": "/media/equipe-musical-formacao-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 50174
+      },
+      {
+        "src": "/media/equipe-musical-formacao-1600.webp",
+        "width": 1600,
+        "height": 1066,
+        "bytes": 99432
+      },
+      {
+        "src": "/media/equipe-musical-formacao-2048.webp",
+        "width": 2048,
+        "height": 1365,
+        "bytes": 138768
+      }
+    ]
+  },
+  "equipe-musical-grupo": {
+    "width": 1638,
+    "height": 2048,
+    "files": [
+      {
+        "src": "/media/equipe-musical-grupo-480.webp",
+        "width": 480,
+        "height": 600,
+        "bytes": 27042
+      },
+      {
+        "src": "/media/equipe-musical-grupo-960.webp",
+        "width": 960,
+        "height": 1200,
+        "bytes": 71008
+      },
+      {
+        "src": "/media/equipe-musical-grupo-1600.webp",
+        "width": 1600,
+        "height": 2000,
+        "bytes": 136984
+      },
+      {
+        "src": "/media/equipe-musical-grupo-1638.webp",
+        "width": 1638,
+        "height": 2048,
+        "bytes": 145222
+      }
+    ]
+  },
+  "equipe-musical-teclado": {
+    "width": 2048,
+    "height": 1365,
+    "files": [
+      {
+        "src": "/media/equipe-musical-teclado-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 11026
+      },
+      {
+        "src": "/media/equipe-musical-teclado-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 29126
+      },
+      {
+        "src": "/media/equipe-musical-teclado-1600.webp",
+        "width": 1600,
+        "height": 1066,
+        "bytes": 57996
+      },
+      {
+        "src": "/media/equipe-musical-teclado-2048.webp",
+        "width": 2048,
+        "height": 1365,
+        "bytes": 83508
+      }
+    ]
+  },
+  "equipe-decoracao-buque": {
+    "width": 1365,
+    "height": 2048,
+    "files": [
+      {
+        "src": "/media/equipe-decoracao-buque-480.webp",
+        "width": 480,
+        "height": 720,
+        "bytes": 28508
+      },
+      {
+        "src": "/media/equipe-decoracao-buque-960.webp",
+        "width": 960,
+        "height": 1440,
+        "bytes": 80016
+      },
+      {
+        "src": "/media/equipe-decoracao-buque-1365.webp",
+        "width": 1365,
+        "height": 2048,
+        "bytes": 136156
+      }
+    ]
+  },
+  "equipe-decoracao-uniforme": {
+    "width": 1365,
+    "height": 2048,
+    "files": [
+      {
+        "src": "/media/equipe-decoracao-uniforme-480.webp",
+        "width": 480,
+        "height": 720,
+        "bytes": 19106
+      },
+      {
+        "src": "/media/equipe-decoracao-uniforme-960.webp",
+        "width": 960,
+        "height": 1440,
+        "bytes": 54066
+      },
+      {
+        "src": "/media/equipe-decoracao-uniforme-1365.webp",
+        "width": 1365,
+        "height": 2048,
+        "bytes": 93640
+      }
+    ]
+  },
+  "equipe-cerimonial-grupo": {
+    "width": 2048,
+    "height": 1638,
+    "files": [
+      {
+        "src": "/media/equipe-cerimonial-grupo-480.webp",
+        "width": 480,
+        "height": 384,
+        "bytes": 17226
+      },
+      {
+        "src": "/media/equipe-cerimonial-grupo-960.webp",
+        "width": 960,
+        "height": 768,
+        "bytes": 43224
+      },
+      {
+        "src": "/media/equipe-cerimonial-grupo-1600.webp",
+        "width": 1600,
+        "height": 1280,
+        "bytes": 85600
+      },
+      {
+        "src": "/media/equipe-cerimonial-grupo-2048.webp",
+        "width": 2048,
+        "height": 1638,
+        "bytes": 124548
+      }
+    ]
+  },
+  "equipe-cerimonial-uniforme": {
+    "width": 2048,
+    "height": 1638,
+    "files": [
+      {
+        "src": "/media/equipe-cerimonial-uniforme-480.webp",
+        "width": 480,
+        "height": 384,
+        "bytes": 14844
+      },
+      {
+        "src": "/media/equipe-cerimonial-uniforme-960.webp",
+        "width": 960,
+        "height": 768,
+        "bytes": 37690
+      },
+      {
+        "src": "/media/equipe-cerimonial-uniforme-1600.webp",
+        "width": 1600,
+        "height": 1280,
+        "bytes": 76086
+      },
+      {
+        "src": "/media/equipe-cerimonial-uniforme-2048.webp",
+        "width": 2048,
+        "height": 1638,
+        "bytes": 112020
+      }
+    ]
+  },
+  "equipe-raiane": {
+    "width": 1365,
+    "height": 2048,
+    "files": [
+      {
+        "src": "/media/equipe-raiane-480.webp",
+        "width": 480,
+        "height": 720,
+        "bytes": 15146
+      },
+      {
+        "src": "/media/equipe-raiane-960.webp",
+        "width": 960,
+        "height": 1440,
+        "bytes": 40734
+      },
+      {
+        "src": "/media/equipe-raiane-1365.webp",
+        "width": 1365,
+        "height": 2048,
+        "bytes": 72102
+      }
+    ]
+  },
+  "equipe-cerimonial-1": {
+    "width": 1365,
+    "height": 2048,
+    "files": [
+      {
+        "src": "/media/equipe-cerimonial-1-480.webp",
+        "width": 480,
+        "height": 720,
+        "bytes": 14624
+      },
+      {
+        "src": "/media/equipe-cerimonial-1-960.webp",
+        "width": 960,
+        "height": 1440,
+        "bytes": 44546
+      },
+      {
+        "src": "/media/equipe-cerimonial-1-1365.webp",
+        "width": 1365,
+        "height": 2048,
+        "bytes": 79258
+      }
+    ]
+  },
+  "equipe-cerimonial-2": {
+    "width": 1365,
+    "height": 2048,
+    "files": [
+      {
+        "src": "/media/equipe-cerimonial-2-480.webp",
+        "width": 480,
+        "height": 720,
+        "bytes": 17888
+      },
+      {
+        "src": "/media/equipe-cerimonial-2-960.webp",
+        "width": 960,
+        "height": 1440,
+        "bytes": 52830
+      },
+      {
+        "src": "/media/equipe-cerimonial-2-1365.webp",
+        "width": 1365,
+        "height": 2048,
+        "bytes": 100466
+      }
+    ]
+  },
+  "equipe-cerimonial-3": {
+    "width": 1365,
+    "height": 2048,
+    "files": [
+      {
+        "src": "/media/equipe-cerimonial-3-480.webp",
+        "width": 480,
+        "height": 720,
+        "bytes": 14258
+      },
+      {
+        "src": "/media/equipe-cerimonial-3-960.webp",
+        "width": 960,
+        "height": 1440,
+        "bytes": 36170
+      },
+      {
+        "src": "/media/equipe-cerimonial-3-1365.webp",
+        "width": 1365,
+        "height": 2048,
+        "bytes": 61920
+      }
+    ]
+  },
+  "equipe-cerimonial-4": {
+    "width": 1365,
+    "height": 2048,
+    "files": [
+      {
+        "src": "/media/equipe-cerimonial-4-480.webp",
+        "width": 480,
+        "height": 720,
+        "bytes": 15624
+      },
+      {
+        "src": "/media/equipe-cerimonial-4-960.webp",
+        "width": 960,
+        "height": 1440,
+        "bytes": 44336
+      },
+      {
+        "src": "/media/equipe-cerimonial-4-1365.webp",
+        "width": 1365,
+        "height": 2048,
+        "bytes": 83534
+      }
+    ]
+  },
+  "noivos-noiva-buque": {
+    "width": 2268,
+    "height": 4032,
+    "files": [
+      {
+        "src": "/media/noivos-noiva-buque-480.webp",
+        "width": 480,
+        "height": 853,
+        "bytes": 66406
+      },
+      {
+        "src": "/media/noivos-noiva-buque-960.webp",
+        "width": 960,
+        "height": 1707,
+        "bytes": 146024
+      },
+      {
+        "src": "/media/noivos-noiva-buque-1600.webp",
+        "width": 1600,
+        "height": 2844,
+        "bytes": 266772
+      },
+      {
+        "src": "/media/noivos-noiva-buque-2268.webp",
+        "width": 2268,
+        "height": 4032,
+        "bytes": 390010
+      }
+    ]
+  },
+  "noivos-silhueta": {
+    "width": 2268,
+    "height": 4032,
+    "files": [
+      {
+        "src": "/media/noivos-silhueta-480.webp",
+        "width": 480,
+        "height": 853,
+        "bytes": 10428
+      },
+      {
+        "src": "/media/noivos-silhueta-960.webp",
+        "width": 960,
+        "height": 1707,
+        "bytes": 25052
+      },
+      {
+        "src": "/media/noivos-silhueta-1600.webp",
+        "width": 1600,
+        "height": 2844,
+        "bytes": 50482
+      },
+      {
+        "src": "/media/noivos-silhueta-2268.webp",
+        "width": 2268,
+        "height": 4032,
+        "bytes": 85898
+      }
+    ]
+  },
+  "noivos-noiva-sorriso": {
+    "width": 2268,
+    "height": 4032,
+    "files": [
+      {
+        "src": "/media/noivos-noiva-sorriso-480.webp",
+        "width": 480,
+        "height": 853,
+        "bytes": 49770
+      },
+      {
+        "src": "/media/noivos-noiva-sorriso-960.webp",
+        "width": 960,
+        "height": 1707,
+        "bytes": 127162
+      },
+      {
+        "src": "/media/noivos-noiva-sorriso-1600.webp",
+        "width": 1600,
+        "height": 2844,
+        "bytes": 246992
+      },
+      {
+        "src": "/media/noivos-noiva-sorriso-2268.webp",
+        "width": 2268,
+        "height": 4032,
+        "bytes": 380050
+      }
+    ]
+  },
+  "noivos-altar": {
+    "width": 2268,
+    "height": 4032,
+    "files": [
+      {
+        "src": "/media/noivos-altar-480.webp",
+        "width": 480,
+        "height": 853,
+        "bytes": 94644
+      },
+      {
+        "src": "/media/noivos-altar-960.webp",
+        "width": 960,
+        "height": 1707,
+        "bytes": 253376
+      },
+      {
+        "src": "/media/noivos-altar-1600.webp",
+        "width": 1600,
+        "height": 2844,
+        "bytes": 459058
+      },
+      {
+        "src": "/media/noivos-altar-2268.webp",
+        "width": 2268,
+        "height": 4032,
+        "bytes": 689910
+      }
+    ]
+  },
+  "noivos-noiva-lago": {
+    "width": 2268,
+    "height": 4032,
+    "files": [
+      {
+        "src": "/media/noivos-noiva-lago-480.webp",
+        "width": 480,
+        "height": 853,
+        "bytes": 37870
+      },
+      {
+        "src": "/media/noivos-noiva-lago-960.webp",
+        "width": 960,
+        "height": 1707,
+        "bytes": 113554
+      },
+      {
+        "src": "/media/noivos-noiva-lago-1600.webp",
+        "width": 1600,
+        "height": 2844,
+        "bytes": 236194
+      },
+      {
+        "src": "/media/noivos-noiva-lago-2268.webp",
+        "width": 2268,
+        "height": 4032,
+        "bytes": 391966
+      }
+    ]
+  },
+  "noivos-noivo-pajem": {
+    "width": 2268,
+    "height": 4032,
+    "files": [
+      {
+        "src": "/media/noivos-noivo-pajem-480.webp",
+        "width": 480,
+        "height": 853,
+        "bytes": 87782
+      },
+      {
+        "src": "/media/noivos-noivo-pajem-960.webp",
+        "width": 960,
+        "height": 1707,
+        "bytes": 230964
+      },
+      {
+        "src": "/media/noivos-noivo-pajem-1600.webp",
+        "width": 1600,
+        "height": 2844,
+        "bytes": 411088
+      },
+      {
+        "src": "/media/noivos-noivo-pajem-2268.webp",
+        "width": 2268,
+        "height": 4032,
+        "bytes": 597254
+      }
+    ]
+  },
+  "depoimento-felipe-samara": {
+    "width": 1131,
+    "height": 2026,
+    "files": [
+      {
+        "src": "/media/depoimento-felipe-samara-480.webp",
+        "width": 480,
+        "height": 860,
+        "bytes": 30744
+      },
+      {
+        "src": "/media/depoimento-felipe-samara-960.webp",
+        "width": 960,
+        "height": 1720,
+        "bytes": 71196
+      },
+      {
+        "src": "/media/depoimento-felipe-samara-1131.webp",
+        "width": 1131,
+        "height": 2026,
+        "bytes": 86616
+      }
+    ]
+  },
+  "depoimento-fabiola-robson": {
+    "width": 1170,
+    "height": 1212,
+    "files": [
+      {
+        "src": "/media/depoimento-fabiola-robson-480.webp",
+        "width": 480,
+        "height": 497,
+        "bytes": 30860
+      },
+      {
+        "src": "/media/depoimento-fabiola-robson-960.webp",
+        "width": 960,
+        "height": 994,
+        "bytes": 75530
+      },
+      {
+        "src": "/media/depoimento-fabiola-robson-1170.webp",
+        "width": 1170,
+        "height": 1212,
+        "bytes": 94800
+      }
+    ]
+  }
+}

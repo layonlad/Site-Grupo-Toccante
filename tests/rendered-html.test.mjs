@@ -9,6 +9,8 @@ const pages = [
   "/decoracao",
   "/cerimonial",
   "/equipe",
+  "/noivos",
+  "/depoimentos",
   "/portfolio",
   "/contato",
   "/privacidade",
@@ -45,7 +47,7 @@ test("brand, self-hosted fonts and responsive hero assets are served", async () 
     "/fonts/EBGaramond.woff2",
     "/fonts/Lato-Regular.woff2",
     "/fonts/Lato-Bold.woff2",
-    "/media/decoracao-mesa-bolo-843.webp",
+    "/media/decoracao-girassois-jardim-960.webp",
     "/robots.txt",
     "/sitemap.xml",
   ])

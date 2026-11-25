@@ -1,3 +1,4 @@
+import { buffetPhotos, decoracaoPhotos, musicalPhotos } from "./gallery";
 export const site = {
   name: "Grupo Toccante",
   origin: "https://layonlad.github.io/Site-Grupo-Toccante",
@@ -11,6 +12,8 @@ export const navigation = [
   ["Quem somos", "/quem-somos"],
   ["Portfólio", "/portfolio"],
   ["Equipe", "/equipe"],
+  ["Noivos", "/noivos"],
+  ["Depoimentos", "/depoimentos"],
   ["Contato", "/contato"],
 ];
 const lapela = {
@@ -57,8 +60,8 @@ export const branches = [
       "Música ao vivo e sensibilidade para acompanhar a emoção de cada momento.",
     intro:
       "Da chegada dos convidados à cerimônia, a música dá ritmo à celebração. A formação e o repertório são alinhados com o casal para traduzir sua história.",
-    image: "musical-violino-ao-ar-livre",
-    alt: "Violinista do Grupo Toccante toca em uma cerimônia ao ar livre.",
+    image: "musical-violino-violoncelo",
+    alt: "Violinista e violoncelista tocam em um gramado com montanhas ao fundo.",
     services: [
       [
         "Pré-receptivo",
@@ -92,7 +95,9 @@ export const branches = [
     teamTitle: "Música feita por pessoas.",
     teamText:
       "Raiane Ventura é idealizadora, produtora de eventos e diretora do Grupo Musical Toccante. A equipe reúne vozes e instrumentistas para compor a formação escolhida para cada celebração.",
-    teamImage: "musical-sax",
+    teamImage: "equipe-musical-grupo",
+    teamAlt:
+      "Cinco músicos do Toccante Musical com violão, violino, teclado e vozes.",
     faq: [
       [
         "Como escolhemos a formação?",
@@ -118,8 +123,8 @@ export const branches = [
       "Sabores, apresentação e uma equipe atenta, da cozinha à mesa.",
     intro:
       "O cardápio faz parte da experiência de receber. Com opções de coquetel, gastronomia mineira, pratos principais e doces, o buffet é planejado de acordo com a celebração.",
-    image: "buffet-mesa-frios",
-    alt: "Mesa de frios com espetinhos, morangos e queijos sobre suportes de madeira.",
+    image: "buffet-coxinhas-sorriso",
+    alt: "Profissional do Buffet Toccante sorri com uma travessa de coxinhas e molho.",
     services: [
       ["Boas-vindas", "Coquetel e salgados para o início da recepção."],
       [
@@ -146,24 +151,12 @@ export const branches = [
       ],
       ["Recepção", "A equipe organiza o atendimento da cozinha ao salão."],
     ],
-    gallery: [
-      "buffet-mesa-frios",
-      "buffet-salgados-tabua",
-      "buffet-pratos-quentes",
-      "buffet-frios-camadas",
-      "buffet-ilha-gastronomica",
-      "buffet-doces-nozes",
-      "buffet-petiscos",
-      "buffet-mesa-posta",
-      "buffet-panelas",
-      "buffet-salgados",
-      "buffet-doces",
-      "buffet-massas",
-    ],
+    gallery: buffetPhotos.map((photo) => photo.image),
     teamTitle: "Cuidado da cozinha ao salão.",
     teamText:
       "Chef, auxiliares, copeiro, garçons, coordenação e recepção compõem a estrutura apresentada nos materiais. A equipe é dimensionada na proposta do evento.",
-    teamImage: "equipe-buffet",
+    teamImage: "equipe-cozinha",
+    teamAlt: "Três profissionais da cozinha do Buffet Toccante.",
     faq: [
       [
         "O cardápio é definido para cada evento?",
@@ -188,8 +181,8 @@ export const branches = [
     description: "Flores, composições e ambientes que acolhem a celebração.",
     intro:
       "Da cerimônia à recepção, cada ambiente participa da experiência. Flores, mesa do bolo e centros de mesa são pensados em conjunto para dar unidade à celebração.",
-    image: "decoracao-mesa-bolo",
-    alt: "Mesa de bolo decorada com flores coloridas, folhagens e doces",
+    image: "decoracao-girassois-jardim",
+    alt: "Mesas de madeira com arranjos de girassóis sob uma árvore iluminada.",
     services: [
       [
         "Cerimônia",
@@ -216,11 +209,13 @@ export const branches = [
         "Organizamos a composição dos espaços para receber o evento.",
       ],
     ],
-    gallery: ["decoracao-mesa-bolo", "decoracao-flores-corredor"],
+    gallery: decoracaoPhotos.map((photo) => photo.image),
     teamTitle: "Um olhar para o conjunto.",
     teamText:
       "A decoração integra o planejamento do Grupo Toccante, em diálogo com as demais vertentes. A composição do projeto é confirmada durante o atendimento.",
-    teamImage: "decoracao-flores-corredor",
+    teamImage: "equipe-decoracao-buque",
+    teamAlt:
+      "Profissional da Decoração Toccante segura um buquê de flores brancas.",
     faq: [
       [
         "A decoração contempla cerimônia e recepção?",
@@ -324,23 +319,13 @@ export const people = [
   },
 ];
 export const portfolio = [
-  {
-    branch: "decoracao",
-    image: "decoracao-mesa-bolo",
-    title: "Flores, cores e celebração",
-    alt: "Mesa de bolo com arranjos florais coloridos e folhagens",
-  },
+  ...decoracaoPhotos.map((photo) => ({ ...photo, branch: "decoracao" })),
+  ...musicalPhotos.map((photo) => ({ ...photo, branch: "musica" })),
   {
     branch: "musica",
     image: "musical-teclado",
     title: "Música que acompanha a emoção",
     alt: "Tecladista do Grupo Toccante tocando durante uma cerimônia",
-  },
-  {
-    branch: "buffet",
-    image: "buffet-mesa-mineira",
-    title: "Sabores à mesa",
-    alt: "Mesa de gastronomia mineira preparada para o serviço",
   },
   {
     branch: "musica",
@@ -349,95 +334,12 @@ export const portfolio = [
     alt: "Violinista tocando ao ar livre",
   },
   {
-    branch: "buffet",
-    image: "buffet-doces",
-    title: "Um toque de doçura",
-    alt: "Seleção de doces brancos e de chocolate",
-  },
-  {
-    branch: "decoracao",
-    image: "decoracao-flores-corredor",
-    title: "O caminho até o sim",
-    alt: "Flores brancas decorando o corredor da cerimônia",
-  },
-  {
     branch: "musica",
     image: "musical-sax",
     title: "Sons que dão vida ao momento",
     alt: "Saxofonista do Grupo Toccante durante uma apresentação",
   },
-  {
-    branch: "buffet",
-    image: "buffet-mesa-frios",
-    title: "Mesa de frios",
-    alt: "Mesa de frios com espetinhos de salame, morangos e queijos sobre suportes de madeira.",
-  },
-  {
-    branch: "buffet",
-    image: "buffet-salgados-tabua",
-    title: "Salgados servidos à mesa",
-    alt: "Profissional do Buffet Toccante leva uma bandeja com tábuas de coxinhas, mini pizzas e espetinhos.",
-  },
-  {
-    branch: "musica",
-    image: "musical-quarteto",
-    title: "Quarteto em cerimônia",
-    alt: "Quatro músicos do Grupo Toccante, com voz, violão, teclado e violino, diante de um arco de flores.",
-  },
-  {
-    branch: "buffet",
-    image: "buffet-pratos-quentes",
-    title: "Pratos quentes",
-    alt: "Mesa com paella enfeitada com ovos, panelas de pedra e biscoitos salgados.",
-  },
-  {
-    branch: "buffet",
-    image: "buffet-frios-camadas",
-    title: "Frios e frutas em camadas",
-    alt: "Suporte de bambu em três níveis com kiwi, damascos, salame e azeitonas.",
-  },
-  {
-    branch: "buffet",
-    image: "buffet-ilha-gastronomica",
-    title: "Ilha gastronômica ao ar livre",
-    alt: "Cozinheiros servem pratos quentes em uma ilha decorada com velas e flores.",
-  },
-  {
-    branch: "buffet",
-    image: "buffet-doces-nozes",
-    title: "Doces finos com nozes",
-    alt: "Bandeja de cristal com doces de chocolate cobertos por nozes douradas.",
-  },
-  {
-    branch: "buffet",
-    image: "buffet-petiscos",
-    title: "Petiscos na tábua",
-    alt: "Tábua de madeira com pastéis assados, mini sanduíches e frango.",
-  },
-  {
-    branch: "buffet",
-    image: "buffet-mesa-posta",
-    title: "Mesa posta com flores",
-    alt: "Mesa de madeira com arranjos de rosas e lírios, sousplats de palha e guardanapos brancos.",
-  },
-  {
-    branch: "buffet",
-    image: "buffet-panelas",
-    title: "Serviço em panelas de pedra",
-    alt: "Panelas de pedra e réchaud de inox dispostos sobre uma mesa rústica.",
-  },
-  {
-    branch: "buffet",
-    image: "buffet-salgados",
-    title: "Salgados de boas-vindas",
-    alt: "Seleção de salgados servidos na recepção.",
-  },
-  {
-    branch: "buffet",
-    image: "buffet-massas",
-    title: "Massas",
-    alt: "Massas servidas em travessas na mesa do buffet.",
-  },
+  ...buffetPhotos.map((photo) => ({ ...photo, branch: "buffet" })),
   ...cerimonialPhotos.map((photo) => ({ ...photo, branch: "cerimonial" })),
 ];
 export const pageMeta: Record<
@@ -463,6 +365,16 @@ export const pageMeta: Record<
     title: "Portfólio",
     description:
       "Fotografias de música, gastronomia, decoração e cerimonial em eventos do Grupo Toccante.",
+  },
+  noivos: {
+    title: "Noivos",
+    description:
+      "Retratos de noivos em celebrações acompanhadas pelo Grupo Toccante.",
+  },
+  depoimentos: {
+    title: "Depoimentos",
+    description:
+      "Mensagens e vídeos de casais que celebraram com o Grupo Toccante.",
   },
   contato: {
     title: "Contato e orçamento",

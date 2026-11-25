@@ -1441,32 +1441,156 @@ dialog::backdrop {
   justify-content: center;
   margin-bottom: clamp(2rem, 4vw, 3rem);
 }
-.music-video {
-  display: grid;
-  grid-template-columns: minmax(0, 22rem) minmax(0, 1fr);
-  align-items: center;
+.film-grid {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: clamp(1.5rem, 5vw, 5rem);
-  max-width: 56rem;
-  margin-inline: auto;
+  gap: clamp(1.4rem, 2.4vw, 2.2rem);
 }
-.music-video .frame {
-  aspect-ratio: 9 / 16;
-  border-radius: 2.4rem;
-  border: 0.5rem solid var(--black);
+.film {
+  flex: 0 1 calc((100% - 3 * clamp(1.4rem, 2.4vw, 2.2rem)) / 4);
+  min-width: 15rem;
+  max-width: 20rem;
+}
+.film-frame {
+  overflow: hidden;
+  border-radius: 2rem;
+  border: 0.45rem solid var(--black);
   background: var(--black);
+  box-shadow: var(--shadow-soft);
 }
-.music-video .frame::after {
-  display: none;
-}
-.music-video video {
+.film-frame video {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.music-video figcaption p:last-child {
-  margin-top: 1rem;
+.film figcaption {
+  padding: 1.1rem 0.4rem 0;
+  text-align: center;
+}
+.film h3 {
+  font-size: 1.3rem;
+}
+.film figcaption p {
+  margin-top: 0.5rem;
+  font-size: 0.92rem;
   color: var(--muted);
+}
+
+/* Noivos */
+.couple-grid {
+  columns: 3;
+}
+.section-link {
+  max-width: none;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+/* Depoimentos */
+.testimonial-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.5rem, 3vw, 2.6rem);
+}
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+  padding: clamp(1.4rem, 3vw, 2.8rem);
+  border-radius: var(--r-xl);
+  border: 1px solid #b5975860;
+  background: var(--cream);
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+}
+.testimonial .eyebrow {
+  justify-content: center;
+}
+.testimonial .film-frame {
+  width: min(100%, 20rem);
+}
+.testimonial-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  gap: clamp(0.8rem, 1.6vw, 1.4rem);
+}
+.testimonial blockquote {
+  margin: 1.4rem 0 0;
+}
+.testimonial blockquote p {
+  font: 400 clamp(1.15rem, 1.5vw, 1.4rem) / 1.4 var(--font-display);
+}
+.testimonial blockquote p + p {
+  margin-top: 0.5rem;
+}
+.testimonial.has-quote {
+  grid-column: 1 / -1;
+}
+.testimonial.has-quote.has-media {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  text-align: left;
+}
+.testimonial.has-quote.has-media .eyebrow {
+  justify-content: flex-start;
+}
+.testimonial.has-media .testimonial-media > * {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 20rem;
+}
+.testimonial.is-dark {
+  background: var(--black);
+  border-color: var(--black);
+  color: var(--ivory);
+}
+.testimonial.is-dark :is(.eyebrow, h2) {
+  color: var(--gold-soft);
+}
+.testimonial.is-dark.has-media {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+.testimonial.is-dark .testimonial-media > * {
+  max-width: 36rem;
+}
+.testimonial.is-dark blockquote p {
+  font-size: clamp(1.1rem, 1.3vw, 1.25rem);
+}
+.testimonial.is-dark blockquote p + p {
+  margin-top: 0.85rem;
+}
+
+/* Equipe: fotos inteiras, lado a lado, na mesma altura */
+.team-group {
+  padding-block: clamp(1.8rem, 3.5vw, 3.2rem);
+}
+.team-group .section-heading {
+  margin-bottom: clamp(1.4rem, 2.6vw, 2.2rem);
+}
+.team-row {
+  display: flex;
+  justify-content: center;
+  gap: clamp(0.8rem, 1.6vw, 1.4rem);
+  margin-inline: auto;
+}
+.team-row + .team-row {
+  margin-top: clamp(0.8rem, 1.6vw, 1.4rem);
+}
+.team-row > figure {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.team-row figcaption {
+  padding: 0.9rem 0.4rem 0;
+  text-align: center;
+  font: 400 1.3rem/1.25 var(--font-display);
 }
 
 /* ---------- Institucional ---------- */
@@ -1544,28 +1668,6 @@ dialog::backdrop {
   grid-column: 2;
   grid-row: 1 / 3;
   font: 400 clamp(1.2rem, 1.6vw, 1.5rem) / 1.45 var(--font-display);
-}
-.team-sectors {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(1.2rem, 3vw, 3rem);
-}
-.team-sectors article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  min-width: 0;
-}
-.team-sectors .frame {
-  width: min(100%, 19rem);
-}
-.team-sectors h3 {
-  margin: 1.5rem 0 0.5rem;
-}
-.team-sectors p {
-  color: var(--muted);
-  max-width: 32ch;
 }
 .editorial-note {
   margin: 2.5rem auto 0;
@@ -2195,6 +2297,19 @@ input[type="checkbox"] {
 }
 
 /* ---------- Telas médias ---------- */
+@media (max-width: 1279px) {
+  .desktop-nav {
+    gap: 0.1rem;
+  }
+  .desktop-nav > a:not(.button),
+  .branch-menu summary {
+    padding-inline: 0.55rem;
+    white-space: nowrap;
+  }
+  .desktop-nav > .button {
+    white-space: nowrap;
+  }
+}
 @media (max-width: 1099px) {
   .desktop-nav {
     display: none;
@@ -2290,15 +2405,17 @@ input[type="checkbox"] {
   .people-grid h2 {
     margin-bottom: 1rem;
   }
-  .values-grid,
-  .team-sectors {
+  .values-grid {
     grid-template-columns: 1fr;
   }
-  .music-video {
-    grid-template-columns: minmax(0, 20rem);
+  .testimonial-list,
+  .testimonial.has-quote.has-media {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .testimonial.has-quote.has-media {
     text-align: center;
   }
-  .music-video .eyebrow {
+  .testimonial.has-quote.has-media .eyebrow {
     justify-content: center;
   }
   .chapter-number {
@@ -2350,6 +2467,21 @@ input[type="checkbox"] {
   }
   .masonry figcaption {
     font-size: 1.02rem;
+  }
+  .couple-grid {
+    columns: 2;
+  }
+  .team-row {
+    flex-wrap: wrap;
+  }
+  .team-row > figure {
+    flex: 0 1 calc(50% - 0.4rem);
+  }
+  .team-row > .is-wide {
+    flex-basis: 100%;
+  }
+  .film {
+    flex-basis: 20rem;
   }
   .masonry.is-few {
     grid-template-columns: 1fr;

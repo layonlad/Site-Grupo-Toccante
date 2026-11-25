@@ -1,13 +1,13 @@
-import Link from "next/link";
+import Link from "./link";
 import { BranchIndex, CTA, FAQ, Frame, Shell } from "./components";
 import { branches, portfolio } from "./content";
 import Intro from "./intro";
 
 const featured = [
   ["cerimonial-lapela", "arch", "4 / 5"],
-  ["buffet-mesa-frios", "soft", "1 / 1"],
-  ["musical-quarteto", "arch", "4 / 5"],
-  ["decoracao-mesa-bolo", "soft", "5 / 4"],
+  ["buffet-coxinhas-sorriso", "soft", "1 / 1"],
+  ["musical-violao", "arch", "4 / 5"],
+  ["decoracao-mesa-bolo-lirios", "soft", "5 / 4"],
 ] as const;
 const principles = [
   [
@@ -54,11 +54,11 @@ export default function Home() {
           <div className="hero-collage hero-enter-photo">
             <Frame
               className="collage-main"
-              name="buffet-mesa-posta"
-              alt="Mesa de madeira com arranjos de rosas e lírios preparada para a recepção."
+              name="decoracao-girassois-jardim"
+              alt="Mesas de madeira com arranjos de girassóis sob uma árvore iluminada."
               shape="arch"
               ratio="4 / 5"
-              focus="62% 50%"
+              focus="50% 60%"
               priority
               reveal={false}
               parallax={0.04}
@@ -66,11 +66,11 @@ export default function Home() {
             />
             <Frame
               className="collage-side"
-              name="musical-violino-ao-ar-livre"
-              alt="Violinista do Grupo Toccante toca em uma cerimônia ao ar livre."
+              name="musical-violino-violoncelo"
+              alt="Violinista e violoncelista tocam em um gramado com montanhas ao fundo."
               shape="arch"
               ratio="3 / 4"
-              focus="50% 12%"
+              focus="50% 40%"
               priority
               reveal={false}
               parallax={0.1}

@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+import Link from "./link";
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { branches, navigation, site, faqs, type Branch } from "./content";
 import { useMotion } from "./motion";
@@ -176,7 +176,7 @@ function Header({ page }: { page: string }) {
     <a
       key={href}
       href={href}
-      aria-current={page === href.slice(1) ? "page" : undefined}
+      aria-current={page === href.split("/").at(-1) ? "page" : undefined}
     >
       {label}
     </a>

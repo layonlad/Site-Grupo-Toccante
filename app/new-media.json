@@ -232,29 +232,5 @@
         "bytes": 285414
       }
     ]
-  },
-  "musical-apresentacao-poster": {
-    "width": 1080,
-    "height": 1920,
-    "files": [
-      {
-        "src": "/media/musical-apresentacao-poster-480.webp",
-        "width": 480,
-        "height": 853,
-        "bytes": 75106
-      },
-      {
-        "src": "/media/musical-apresentacao-poster-900.webp",
-        "width": 900,
-        "height": 1600,
-        "bytes": 155932
-      },
-      {
-        "src": "/media/musical-apresentacao-poster-1080.webp",
-        "width": 1080,
-        "height": 1920,
-        "bytes": 191442
-      }
-    ]
   }
 }

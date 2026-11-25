@@ -1,0 +1,72 @@
+{
+  "buffet-video": {
+    "src": "/media/buffet-video.mp4",
+    "poster": "/media/buffet-video-capa.webp",
+    "width": 960,
+    "height": 1707,
+    "bytes": 4827164
+  },
+  "decoracao-video-1": {
+    "src": "/media/decoracao-video-1.mp4",
+    "poster": "/media/decoracao-video-1-capa.webp",
+    "width": 960,
+    "height": 1707,
+    "bytes": 3445763
+  },
+  "decoracao-video-2": {
+    "src": "/media/decoracao-video-2.mp4",
+    "poster": "/media/decoracao-video-2-capa.webp",
+    "width": 960,
+    "height": 1707,
+    "bytes": 3286239
+  },
+  "depoimento-felipe-samara": {
+    "src": "/media/depoimento-felipe-samara.mp4",
+    "poster": "/media/depoimento-felipe-samara-capa.webp",
+    "width": 960,
+    "height": 1707,
+    "bytes": 20763800
+  },
+  "depoimento-karen-joao": {
+    "src": "/media/depoimento-karen-joao.mp4",
+    "poster": "/media/depoimento-karen-joao-capa.webp",
+    "width": 960,
+    "height": 1707,
+    "bytes": 42960362
+  },
+  "depoimento-lais-lucas": {
+    "src": "/media/depoimento-lais-lucas.mp4",
+    "poster": "/media/depoimento-lais-lucas-capa.webp",
+    "width": 960,
+    "height": 1280,
+    "bytes": 42606435
+  },
+  "musical-video-1": {
+    "src": "/media/musical-video-1.mp4",
+    "poster": "/media/musical-video-1-capa.webp",
+    "width": 960,
+    "height": 1707,
+    "bytes": 49517116
+  },
+  "musical-video-2": {
+    "src": "/media/musical-video-2.mp4",
+    "poster": "/media/musical-video-2-capa.webp",
+    "width": 960,
+    "height": 1707,
+    "bytes": 64358374
+  },
+  "musical-video-3": {
+    "src": "/media/musical-video-3.mp4",
+    "poster": "/media/musical-video-3-capa.webp",
+    "width": 960,
+    "height": 1707,
+    "bytes": 84617730
+  },
+  "musical-video-4": {
+    "src": "/media/musical-video-4.mp4",
+    "poster": "/media/musical-video-4-capa.webp",
+    "width": 960,
+    "height": 1707,
+    "bytes": 48056084
+  }
+}

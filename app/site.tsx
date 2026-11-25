@@ -1,18 +1,27 @@
 "use client";
-import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import Link from "./link";
+import { useEffect, useState } from "react";
 import {
   BranchIndex,
   CTA,
   FAQ,
   Frame,
   PageHeading,
-  Photo,
   SectionHeading,
   Shell,
 } from "./components";
 import { branches, people, portfolio, site, type Branch } from "./content";
 import ContactForm from "./contact-form";
+import Film, { FilmGrid } from "./film";
+import {
+  branchFilms,
+  couplePhotos,
+  teamGroups,
+  testimonials,
+  type Testimonial,
+} from "./gallery";
+import PhotoGallery from "./photo-gallery";
+import { photographs } from "./photographs";
 import MusicalMedia from "./musical-media";
 import WhatsAppLink from "./whatsapp-link";
 
@@ -32,6 +41,7 @@ const heroFocus: Record<string, string> = {
 };
 function BranchPage({ branch: b }: { branch: Branch }) {
   const few = b.gallery.length <= 3;
+  const films = branchFilms[b.key];
   return (
     <Shell page={b.key}>
       <section className="branch-hero">
@@ -168,21 +178,26 @@ function BranchPage({ branch: b }: { branch: Branch }) {
           </section>
         )
       )}
+      {films && (
+        <section className="section" aria-labelledby="videos-title">
+          <div className="container">
+            <div className="section-heading is-center" data-reveal="">
+              <p className="eyebrow">{b.name}</p>
+              <h2 id="videos-title">O momento em vídeo.</h2>
+            </div>
+            <FilmGrid items={films} />
+          </div>
+        </section>
+      )}
       {b.key !== "cerimonial" && (
         <section className="section">
           <div className="container split-layout">
             <Frame
               name={b.teamImage}
-              shape={b.teamImage.includes("equipe") ? "soft" : "arch"}
-              ratio={b.teamImage.includes("equipe") ? undefined : "4 / 5"}
+              shape={b.key === "decoracao" ? "arch" : "soft"}
+              ratio={b.key === "decoracao" ? "4 / 5" : undefined}
               sizes="(max-width: 767px) 92vw, 46vw"
-              alt={
-                b.teamImage.includes("equipe")
-                  ? `Equipe ${b.name}`
-                  : b.key === "musica"
-                    ? "Saxofonista durante apresentação"
-                    : "Arranjo de flores brancas na cerimônia"
-              }
+              alt={b.teamAlt}
             />
             <div data-reveal="">
               <div className="section-heading">
@@ -210,8 +225,8 @@ function About() {
   return (
     <Shell page="quem-somos">
       <PageHeading
-        image="decoracao-mesa-bolo"
-        imageAlt="Mesa de bolo sob flores e folhagens suspensas."
+        image="decoracao-cerimonia-lago"
+        imageAlt="Cadeiras e flores em um deck com vista para o lago."
         focus="50% 50%"
         eyebrow="Nossa essência"
         title="Um grupo. Muitas formas de tocar uma história."
@@ -307,10 +322,10 @@ function Team() {
   return (
     <Shell page="equipe">
       <PageHeading
-        image="equipe-buffet"
-        imageAlt="Equipe do buffet reunida no salão do evento."
+        image="equipe-cerimonial-grupo"
+        imageAlt="Quatro profissionais do Cerimonial Toccante sorriem juntas."
         shape="soft"
-        ratio="1280 / 580"
+        ratio="5 / 4"
         eyebrow="Nossa equipe"
         title="O cuidado tem pessoas por trás."
         text="Profissionais que conectam planejamento, sensibilidade e presença em cada celebração."
@@ -328,52 +343,58 @@ function Team() {
           </div>
         </div>
       </section>
+      {teamGroups.map((group) => (
+        <section
+          className="section team-group"
+          key={group.key}
+          aria-labelledby={`equipe-${group.key}`}
+        >
+          <div className="container">
+            <div className="section-heading is-center" data-reveal="">
+              <p className="eyebrow">Nossa equipe</p>
+              <h2 id={`equipe-${group.key}`}>{group.title}</h2>
+              {group.text && <p className="lead">{group.text}</p>}
+            </div>
+            {group.rows.map((row) => {
+              const ratios = row.map((photo) => {
+                const item = photographs[photo.image]!;
+                return item.width / item.height;
+              });
+              const total = ratios.reduce((sum, ratio) => sum + ratio, 0);
+              return (
+                <div
+                  className="team-row"
+                  key={row[0].image}
+                  data-reveal-group=""
+                  style={{ maxWidth: `${(total * 28).toFixed(1)}rem` }}
+                >
+                  {row.map((photo, i) => (
+                    <figure
+                      key={photo.image}
+                      className={ratios[i] > 1 ? "is-wide" : undefined}
+                      style={{ flexGrow: ratios[i] }}
+                    >
+                      <Frame
+                        name={photo.image}
+                        alt={photo.alt}
+                        reveal={false}
+                        sizes={`(max-width: 640px) 92vw, ${Math.round(
+                          (ratios[i] / total) * Math.min(1280, total * 448),
+                        )}px`}
+                      />
+                      {photo.caption && (
+                        <figcaption>{photo.caption}</figcaption>
+                      )}
+                    </figure>
+                  ))}
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      ))}
       <section className="section">
         <div className="container">
-          <SectionHeading
-            center
-            eyebrow="Trabalho em conjunto"
-            title="Cada especialidade faz parte do todo."
-          />
-          <div className="team-sectors" data-reveal-group="">
-            {[
-              {
-                image: "buffet-salgados-tabua",
-                name: "Buffet",
-                alt: "Profissional do Buffet Toccante serve tábuas de salgados.",
-                focus: "50% 10%",
-                text: "Cozinha, serviço e coordenação, com atenção à experiência de receber.",
-              },
-              {
-                image: "musical-quarteto",
-                name: "Musical",
-                alt: "Quatro músicos do Grupo Toccante diante de um arco de flores.",
-                focus: "50% 70%",
-                text: "Vozes e instrumentos em sintonia com os momentos da cerimônia.",
-              },
-              {
-                image: "cerimonial-retrato-equipe",
-                name: "Cerimonial",
-                alt: "Profissional do Grupo Toccante em uniforme do cerimonial ao ar livre.",
-                focus: "50% 20%",
-                text: "Planejamento, acolhimento e acompanhamento dos bastidores.",
-              },
-            ].map((t) => (
-              <article key={t.name}>
-                <Frame
-                  name={t.image}
-                  shape="arch"
-                  ratio="4 / 5"
-                  focus={t.focus}
-                  reveal={false}
-                  alt={t.alt}
-                  sizes="(max-width: 767px) 80vw, 340px"
-                />
-                <h3>{t.name}</h3>
-                <p>{t.text}</p>
-              </article>
-            ))}
-          </div>
           <p className="editorial-note">
             As equipes e a composição de cada serviço são definidas conforme a
             proposta do evento.
@@ -384,33 +405,112 @@ function Team() {
     </Shell>
   );
 }
+function Couples() {
+  return (
+    <Shell page="noivos">
+      <PageHeading
+        image="noivos-noiva-buque"
+        imageAlt="Noiva de vestido de renda sorri com o buquê sob a luz do entardecer."
+        focus="50% 20%"
+        eyebrow="Noivos"
+        title="Histórias que tivemos a alegria de celebrar."
+        text="Retratos de quem viveu o seu dia ao lado do Grupo Toccante."
+      />
+      <section className="section portfolio-section">
+        <div className="container">
+          <PhotoGallery
+            items={couplePhotos}
+            className="couple-grid"
+            captions={false}
+            sizes="(max-width:640px) 46vw, (max-width:1100px) 31vw, 400px"
+          />
+          <p className="section-link">
+            <Link prefetch={false} className="button" href="/depoimentos">
+              Ler os depoimentos
+            </Link>
+          </p>
+        </div>
+      </section>
+      <CTA />
+    </Shell>
+  );
+}
+function TestimonialCard({ item }: { item: Testimonial }) {
+  const media = Boolean(item.photo || item.video);
+  return (
+    <article
+      className={`testimonial${item.quote ? " has-quote" : ""}${media ? " has-media" : ""}${item.video ? "" : " is-dark"}`}
+      data-reveal=""
+    >
+      {media && (
+        <div className="testimonial-media">
+          {item.photo && (
+            <Frame
+              name={item.photo.image}
+              alt={item.photo.alt}
+              ratio={item.photo.ratio}
+              reveal={false}
+              sizes={
+                item.video
+                  ? "(max-width: 640px) 46vw, 300px"
+                  : "(max-width: 860px) 88vw, 560px"
+              }
+            />
+          )}
+          {item.video && (
+            <Film name={item.video.video} label={item.video.alt} />
+          )}
+        </div>
+      )}
+      <div className="testimonial-copy">
+        <p className="eyebrow">
+          {item.quote ? "Depoimento" : "Depoimento em vídeo"}
+        </p>
+        <h2>{item.couple}</h2>
+        {item.quote && (
+          <blockquote>
+            {item.quote.map((line) => (
+              <p key={line}>{line}</p>
+            ))}
+          </blockquote>
+        )}
+      </div>
+    </article>
+  );
+}
+function Testimonials() {
+  return (
+    <Shell page="depoimentos">
+      <PageHeading
+        image="depoimento-felipe-samara"
+        imageAlt="Felipe e Samara em retrato no dia do casamento."
+        focus="50% 22%"
+        eyebrow="Depoimentos"
+        title="O que fica depois da festa."
+        text="Palavras e vídeos de casais que celebraram com o Grupo Toccante."
+      />
+      <section className="section">
+        <div className="container testimonial-list">
+          {testimonials.map((item) => (
+            <TestimonialCard item={item} key={item.couple} />
+          ))}
+        </div>
+      </section>
+      <CTA />
+    </Shell>
+  );
+}
 function Portfolio({ initialBranch }: { initialBranch?: string }) {
   const [filter, setFilter] = useState(initialBranch ?? "todos");
-  const [selected, setSelected] = useState<(typeof portfolio)[number] | null>(
-    null,
-  );
-  const modal = useRef<HTMLDialogElement>(null);
-  const origin = useRef<HTMLButtonElement | null>(null);
-  useEffect(() => {
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, []);
   const shown =
     filter === "todos"
       ? portfolio
       : portfolio.filter((p) => p.branch === filter);
-  function close() {
-    modal.current?.close();
-    setSelected(null);
-    document.body.style.overflow = "";
-    origin.current?.focus();
-  }
   return (
     <Shell page="portfolio">
       <PageHeading
         image="buffet-frios-camadas"
-        imageAlt="Suporte de bambu com frutas e frios em uma mesa de recepção."
+        imageAlt="Suporte de madeira com frutas e frios em uma mesa de recepção."
         eyebrow="Nosso portfólio"
         title="Momentos reais. Detalhes que permanecem."
         text="Um olhar para a música, os sabores, os ambientes e as pessoas que participam das nossas celebrações."
@@ -439,66 +539,19 @@ function Portfolio({ initialBranch }: { initialBranch?: string }) {
               ? "Ainda não há fotografias nesta vertente."
               : `${shown.length} registros ${filter === "todos" ? "no portfólio" : "de " + branches.find((b) => b.key === filter)?.label}`}
           </p>
-          <div className="masonry portfolio-grid">
-            {shown.map((p) => (
-              <figure key={p.image}>
-                <button
-                  className="photo-open"
-                  onClick={(e) => {
-                    origin.current = e.currentTarget;
-                    setSelected(p);
-                    modal.current?.showModal();
-                    document.body.style.overflow = "hidden";
-                  }}
-                  aria-label={`Ampliar fotografia: ${p.title}`}
-                >
-                  <Photo
-                    name={p.image}
-                    alt={p.alt}
-                    sizes="(max-width:650px) 46vw, (max-width:1100px) 31vw, 290px"
-                  />
-                  <span className="expand-photo" aria-hidden="true">
-                    Ampliar
-                  </span>
-                </button>
-                <figcaption>
-                  <p className="eyebrow">
-                    {branches.find((b) => b.key === p.branch)?.name}
-                  </p>
-                  <h2>{p.title}</h2>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
+          <PhotoGallery
+            items={shown}
+            className="portfolio-grid"
+            eyebrow={(item) =>
+              branches.find(
+                (b) =>
+                  b.key ===
+                  portfolio.find((p) => p.image === item.image)?.branch,
+              )?.name
+            }
+          />
         </div>
       </section>
-      <dialog
-        className="photo-dialog"
-        ref={modal}
-        aria-label={selected?.title || "Fotografia ampliada"}
-        onCancel={close}
-        onClose={() => {
-          document.body.style.overflow = "";
-        }}
-        onPointerDown={(e) => {
-          if (e.target === modal.current) close();
-        }}
-      >
-        <button className="close-button" onClick={close}>
-          Fechar
-        </button>
-        {selected && (
-          <figure>
-            <Photo
-              name={selected.image}
-              alt={selected.alt}
-              priority
-              sizes="90vw"
-            />
-            <figcaption>{selected.title}</figcaption>
-          </figure>
-        )}
-      </dialog>
       <CTA />
     </Shell>
   );
@@ -629,6 +682,15 @@ export default function Site({
   page: string;
   initialBranch?: string;
 }) {
+  // Nas páginas estáticas o servidor não conhece a consulta: lê da URL.
+  const [chosen, setChosen] = useState(initialBranch);
+  useEffect(() => {
+    function readBranch() {
+      const key = new URLSearchParams(window.location.search).get("vertente");
+      setChosen(branches.find((branch) => branch.key === key)?.key);
+    }
+    readBranch();
+  }, []);
   const b = branches.find((b) => b.key === page);
   if (b) return <BranchPage branch={b} />;
   switch (page) {
@@ -638,10 +700,14 @@ export default function Site({
       return <About />;
     case "equipe":
       return <Team />;
+    case "noivos":
+      return <Couples />;
+    case "depoimentos":
+      return <Testimonials />;
     case "portfolio":
-      return <Portfolio initialBranch={initialBranch} />;
+      return <Portfolio key={chosen} initialBranch={chosen} />;
     case "contato":
-      return <Contact initialBranch={initialBranch} />;
+      return <Contact key={chosen} initialBranch={chosen} />;
     case "privacidade":
       return <Privacy />;
     default:
