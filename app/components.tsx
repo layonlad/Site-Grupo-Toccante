@@ -377,6 +377,7 @@ export function PageHeading({
   shape = "arch",
   ratio = "4 / 5",
   focus,
+  media,
 }: {
   eyebrow: string;
   title: string;
@@ -386,9 +387,12 @@ export function PageHeading({
   shape?: "soft" | "arch" | "oval" | "round";
   ratio?: string;
   focus?: string;
+  media?: React.ReactNode;
 }) {
   return (
-    <section className={`page-heading${image ? " photo-masthead" : ""}`}>
+    <section
+      className={`page-heading${image || media ? " photo-masthead" : ""}`}
+    >
       <div className="container">
         <div className="masthead-panel">
           <div className="masthead-copy hero-enter">
@@ -396,7 +400,10 @@ export function PageHeading({
             <h1>{title}</h1>
             {text && <p className="lead">{text}</p>}
           </div>
-          {image && (
+          {media && (
+            <div className="masthead-image hero-enter-photo">{media}</div>
+          )}
+          {image && !media && (
             <div className="masthead-image hero-enter-photo">
               <Frame
                 name={image}

@@ -583,3 +583,115 @@ export const testimonials: Testimonial[] = [
     ],
   },
 ];
+
+/**
+ * Carrossel do topo de Contato. `studio` apoia a foto na base do arco, com as
+ * pessoas inteiras, e continua o fundo claro do estúdio até o topo.
+ */
+export type Slide = {
+  image: string;
+  alt: string;
+  focus?: string;
+  studio?: { width: string; left: string; backdrop: string };
+};
+export const contactSlides: Slide[] = [
+  {
+    image: "musical-violino-violoncelo",
+    alt: "Violinista e violoncelista tocam em um gramado com montanhas ao fundo.",
+    focus: "50% 40%",
+  },
+  {
+    image: "decoracao-bolo-rosas",
+    alt: "Bolo branco de quatro andares com rosas alaranjadas e flores suspensas.",
+    focus: "50% 75%",
+  },
+  {
+    image: "noivos-noiva-buque",
+    alt: "Noiva de vestido de renda sorri com o buquê sob a luz do entardecer.",
+    focus: "50% 18%",
+  },
+  {
+    image: "decoracao-girassois-jardim",
+    alt: "Mesas de madeira com arranjos de girassóis sob uma árvore iluminada.",
+    focus: "48% 60%",
+  },
+  {
+    image: "equipe-cerimonial-uniforme",
+    alt: "Equipe do Cerimonial Toccante com o nome bordado no uniforme.",
+    studio: {
+      width: "128%",
+      left: "-15.9%",
+      backdrop:
+        "linear-gradient(90deg, #e0dde0, #dedbde, #d7d4d7, #cfcccf, #c7c4c7)",
+    },
+  },
+  {
+    image: "equipe-buffet-utensilios",
+    alt: "Três profissionais da cozinha do Buffet Toccante com utensílios nas mãos.",
+    studio: {
+      width: "100%",
+      left: "0.0%",
+      backdrop:
+        "linear-gradient(90deg, #ece9ea, #eae8e8, #e6e4e5, #dfdde0, #d0cdd0)",
+    },
+  },
+  {
+    image: "equipe-musical-teclado",
+    alt: "Tecladista do Toccante Musical ao teclado.",
+    studio: {
+      width: "128%",
+      left: "-9.6%",
+      backdrop:
+        "linear-gradient(90deg, #f1eeee, #eae8e8, #e3e1e1, #ded9db, #d8d3d5)",
+    },
+  },
+];
+
+/** Capa do início: cada moldura alterna as fotos de uma pasta. */
+const slidesOf = (
+  photos: readonly { image: string; alt: string }[],
+  extra: Record<string, Partial<Slide>>,
+): Slide[] => photos.map(({ image, alt }) => ({ image, alt, ...extra[image] }));
+const ceremonial = teamGroups.find((group) => group.key === "cerimonial")!;
+export const heroSlides = {
+  couples: slidesOf(couplePhotos, {
+    "noivos-noiva-buque": { focus: "50% 18%" },
+    "noivos-altar": { focus: "50% 60%" },
+    "noivos-noiva-sorriso": { focus: "50% 45%" },
+    "noivos-noivo-pajem": { focus: "50% 40%" },
+    "noivos-noiva-lago": { focus: "50% 22%" },
+    "noivos-silhueta": { focus: "50% 8%" },
+  }),
+  music: slidesOf(musicalPhotos, {
+    "musical-violino-violoncelo": { focus: "50% 40%" },
+    "musical-duo-vozes": { focus: "50% 70%" },
+    "musical-formacao-entardecer": { focus: "69% 50%" },
+    "musical-violao": { focus: "50% 15%" },
+    "musical-violino-a-sombra": { focus: "62% 50%" },
+    "musical-tecnico-som": { focus: "50% 55%" },
+    "musical-quarteto": { focus: "50% 70%" },
+  }),
+  ceremonial: slidesOf([...ceremonial.rows[1], ...ceremonial.rows[0]], {
+    "equipe-raiane": { focus: "50% 38%" },
+    "equipe-cerimonial-1": { focus: "50% 26%" },
+    "equipe-cerimonial-2": { focus: "50% 14%" },
+    "equipe-cerimonial-3": { focus: "50% 16%" },
+    "equipe-cerimonial-4": { focus: "50% 22%" },
+    "equipe-cerimonial-grupo": {
+      studio: {
+        width: "100%",
+        left: "0",
+        backdrop:
+          "linear-gradient(90deg, #dbd9db, #d9d6da, #d2cfd3, #c8c5c8, #b8b5b8)",
+      },
+    },
+    "equipe-cerimonial-uniforme": {
+      studio: {
+        width: "100%",
+        left: "0",
+        backdrop:
+          "linear-gradient(90deg, #e0dddf, #dfdcdf, #d8d5d8, #cecbce, #c1bec1)",
+      },
+    },
+  }),
+};

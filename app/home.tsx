@@ -1,6 +1,7 @@
 import Link from "./link";
 import { BranchIndex, CTA, FAQ, Frame, Shell } from "./components";
 import { branches, portfolio } from "./content";
+import HeroCollage from "./hero-collage";
 import Intro from "./intro";
 
 const featured = [
@@ -23,7 +24,6 @@ const principles = [
     "As equipes acompanham o cortejo, recebem os convidados e cuidam do ritmo da celebração.",
   ],
 ];
-const ring = "Música · Buffet · Decoração · Cerimonial · ";
 
 export default function Home() {
   return (
@@ -51,57 +51,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="hero-collage hero-enter-photo">
-            <Frame
-              className="collage-main"
-              name="decoracao-girassois-jardim"
-              alt="Mesas de madeira com arranjos de girassóis sob uma árvore iluminada."
-              shape="arch"
-              ratio="4 / 5"
-              focus="50% 60%"
-              priority
-              reveal={false}
-              parallax={0.04}
-              sizes="(max-width: 760px) 70vw, 440px"
-            />
-            <Frame
-              className="collage-side"
-              name="musical-violino-violoncelo"
-              alt="Violinista e violoncelista tocam em um gramado com montanhas ao fundo."
-              shape="arch"
-              ratio="3 / 4"
-              focus="50% 40%"
-              priority
-              reveal={false}
-              parallax={0.1}
-              sizes="(max-width: 760px) 36vw, 220px"
-            />
-            <Frame
-              className="collage-round"
-              name="cerimonial-lapela"
-              alt="Cerimonialista prende uma flor à lapela do noivo."
-              shape="round"
-              ratio="1 / 1"
-              focus="50% 18%"
-              reveal={false}
-              parallax={-0.06}
-              sizes="(max-width: 760px) 30vw, 180px"
-            />
-            <div className="collage-seal" aria-hidden="true">
-              <svg viewBox="0 0 200 200">
-                <defs>
-                  <path
-                    id="seal-path"
-                    d="M100 100 m-78 0 a78 78 0 1 1 156 0 a78 78 0 1 1 -156 0"
-                  />
-                </defs>
-                <text>
-                  <textPath href="#seal-path">{ring + ring}</textPath>
-                </text>
-              </svg>
-              <img src="/brand.svg" width="48" height="52" alt="" />
-            </div>
-          </div>
+          <HeroCollage />
         </div>
       </section>
       <div className="marquee" aria-hidden="true">

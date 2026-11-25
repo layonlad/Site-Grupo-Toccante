@@ -12,9 +12,11 @@ import {
 } from "./components";
 import { branches, people, portfolio, site, type Branch } from "./content";
 import ContactForm from "./contact-form";
+import Carousel from "./carousel";
 import Film, { FilmGrid } from "./film";
 import {
   branchFilms,
+  contactSlides,
   couplePhotos,
   teamGroups,
   testimonials,
@@ -560,9 +562,9 @@ function Contact({ initialBranch }: { initialBranch?: string }) {
   return (
     <Shell page="contato">
       <PageHeading
-        image="cerimonial-orientacao"
-        imageAlt="Cerimonialista com a prancheta conversa na entrada do evento."
-        focus="50% 22%"
+        media={
+          <Carousel slides={contactSlides} label="Momentos do Grupo Toccante" />
+        }
         eyebrow="Contato e orçamento"
         title="Toda celebração começa com uma conversa."
         text="Conte um pouco sobre o seu evento. Vamos preparar juntos as próximas escolhas."
