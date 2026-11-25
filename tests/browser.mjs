@@ -102,10 +102,10 @@ assert.ok(
 );
 await page.goto(base + "/portfolio?vertente=musica");
 await page.waitForFunction(
-  () => document.querySelectorAll(".portfolio-grid figure").length === 3,
+  () => document.querySelectorAll(".portfolio-grid figure").length === 4,
 );
 await page.getByRole("button", { name: "Buffet", exact: true }).click();
-assert.equal(await page.locator(".portfolio-grid figure").count(), 2);
+assert.equal(await page.locator(".portfolio-grid figure").count(), 14);
 await page
   .getByRole("button", { name: /Ampliar fotografia/ })
   .first()
@@ -164,13 +164,22 @@ assert.match(summary, /Música, Buffet, Decoração, Cerimonial/);
 assert.match(summary, /21\/04\/2027/);
 assert.match(summary, /Música instrumental/);
 assert.match(summary, /teste@example.com/);
-assert.equal(
-  await page
-    .getByRole("link", { name: /2. Abrir atendimento/ })
-    .getAttribute("href"),
-  "https://grupotoccanteoficial.github.io/Link.toccante/",
-);
-await page.getByRole("button", { name: /1. Copiar resumo/ }).click();
+const popups = [];
+await page.context().route("https://wa.me/**", (route) => {
+  popups.push(route.request().url());
+  return route.fulfill({ status: 200, body: "ok" });
+});
+for (let i = 0; i < 5; i += 1) {
+  const popup = page.waitForEvent("popup");
+  await page.getByRole("button", { name: /1. Enviar pelo WhatsApp/ }).click();
+  await (await popup).close();
+}
+assert.equal(popups.length, 5);
+const phones = popups.map((u) => u.match(/wa\.me\/(\d+)/)[1]);
+assert.equal(new Set(phones.slice(0, 4)).size, 4, "um de cada vez");
+assert.equal(phones[4], phones[0]);
+assert.ok(decodeURIComponent(popups[0]).includes("Cliente de teste"));
+await page.getByRole("button", { name: /2. Copiar resumo/ }).click();
 assert.equal(
   await page.evaluate(() => navigator.clipboard.readText()),
   summary,

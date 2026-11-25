@@ -1,0 +1,260 @@
+{
+  "buffet-frios-camadas": {
+    "width": 970,
+    "height": 1440,
+    "files": [
+      {
+        "src": "/media/buffet-frios-camadas-480.webp",
+        "width": 480,
+        "height": 713,
+        "bytes": 26050
+      },
+      {
+        "src": "/media/buffet-frios-camadas-900.webp",
+        "width": 900,
+        "height": 1336,
+        "bytes": 52230
+      },
+      {
+        "src": "/media/buffet-frios-camadas-970.webp",
+        "width": 970,
+        "height": 1440,
+        "bytes": 57170
+      }
+    ]
+  },
+  "buffet-mesa-frios": {
+    "width": 1410,
+    "height": 1410,
+    "files": [
+      {
+        "src": "/media/buffet-mesa-frios-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 39618
+      },
+      {
+        "src": "/media/buffet-mesa-frios-900.webp",
+        "width": 900,
+        "height": 900,
+        "bytes": 74242
+      },
+      {
+        "src": "/media/buffet-mesa-frios-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 100338
+      }
+    ]
+  },
+  "buffet-pratos-quentes": {
+    "width": 1115,
+    "height": 1208,
+    "files": [
+      {
+        "src": "/media/buffet-pratos-quentes-480.webp",
+        "width": 480,
+        "height": 520,
+        "bytes": 50796
+      },
+      {
+        "src": "/media/buffet-pratos-quentes-900.webp",
+        "width": 900,
+        "height": 975,
+        "bytes": 100232
+      },
+      {
+        "src": "/media/buffet-pratos-quentes-1115.webp",
+        "width": 1115,
+        "height": 1208,
+        "bytes": 122478
+      }
+    ]
+  },
+  "buffet-salgados-tabua": {
+    "width": 1045,
+    "height": 1450,
+    "files": [
+      {
+        "src": "/media/buffet-salgados-tabua-480.webp",
+        "width": 480,
+        "height": 666,
+        "bytes": 64698
+      },
+      {
+        "src": "/media/buffet-salgados-tabua-900.webp",
+        "width": 900,
+        "height": 1249,
+        "bytes": 127466
+      },
+      {
+        "src": "/media/buffet-salgados-tabua-1045.webp",
+        "width": 1045,
+        "height": 1450,
+        "bytes": 149034
+      }
+    ]
+  },
+  "buffet-ilha-gastronomica": {
+    "width": 1179,
+    "height": 1434,
+    "files": [
+      {
+        "src": "/media/buffet-ilha-gastronomica-480.webp",
+        "width": 480,
+        "height": 584,
+        "bytes": 51292
+      },
+      {
+        "src": "/media/buffet-ilha-gastronomica-900.webp",
+        "width": 900,
+        "height": 1095,
+        "bytes": 116334
+      },
+      {
+        "src": "/media/buffet-ilha-gastronomica-1179.webp",
+        "width": 1179,
+        "height": 1434,
+        "bytes": 159944
+      }
+    ]
+  },
+  "buffet-mesa-posta": {
+    "width": 1179,
+    "height": 1115,
+    "files": [
+      {
+        "src": "/media/buffet-mesa-posta-480.webp",
+        "width": 480,
+        "height": 454,
+        "bytes": 34100
+      },
+      {
+        "src": "/media/buffet-mesa-posta-900.webp",
+        "width": 900,
+        "height": 851,
+        "bytes": 71336
+      },
+      {
+        "src": "/media/buffet-mesa-posta-1179.webp",
+        "width": 1179,
+        "height": 1115,
+        "bytes": 99390
+      }
+    ]
+  },
+  "buffet-panelas": {
+    "width": 719,
+    "height": 918,
+    "files": [
+      {
+        "src": "/media/buffet-panelas-480.webp",
+        "width": 480,
+        "height": 613,
+        "bytes": 40586
+      },
+      {
+        "src": "/media/buffet-panelas-719.webp",
+        "width": 719,
+        "height": 918,
+        "bytes": 65772
+      }
+    ]
+  },
+  "buffet-petiscos": {
+    "width": 1179,
+    "height": 1218,
+    "files": [
+      {
+        "src": "/media/buffet-petiscos-480.webp",
+        "width": 480,
+        "height": 496,
+        "bytes": 32072
+      },
+      {
+        "src": "/media/buffet-petiscos-900.webp",
+        "width": 900,
+        "height": 930,
+        "bytes": 71820
+      },
+      {
+        "src": "/media/buffet-petiscos-1179.webp",
+        "width": 1179,
+        "height": 1218,
+        "bytes": 101112
+      }
+    ]
+  },
+  "buffet-doces-nozes": {
+    "width": 1179,
+    "height": 1285,
+    "files": [
+      {
+        "src": "/media/buffet-doces-nozes-480.webp",
+        "width": 480,
+        "height": 523,
+        "bytes": 79856
+      },
+      {
+        "src": "/media/buffet-doces-nozes-900.webp",
+        "width": 900,
+        "height": 981,
+        "bytes": 228642
+      },
+      {
+        "src": "/media/buffet-doces-nozes-1179.webp",
+        "width": 1179,
+        "height": 1285,
+        "bytes": 326594
+      }
+    ]
+  },
+  "musical-quarteto": {
+    "width": 1040,
+    "height": 1300,
+    "files": [
+      {
+        "src": "/media/musical-quarteto-480.webp",
+        "width": 480,
+        "height": 600,
+        "bytes": 95972
+      },
+      {
+        "src": "/media/musical-quarteto-900.webp",
+        "width": 900,
+        "height": 1125,
+        "bytes": 235872
+      },
+      {
+        "src": "/media/musical-quarteto-1040.webp",
+        "width": 1040,
+        "height": 1300,
+        "bytes": 285414
+      }
+    ]
+  },
+  "musical-apresentacao-poster": {
+    "width": 1080,
+    "height": 1920,
+    "files": [
+      {
+        "src": "/media/musical-apresentacao-poster-480.webp",
+        "width": 480,
+        "height": 853,
+        "bytes": 75106
+      },
+      {
+        "src": "/media/musical-apresentacao-poster-900.webp",
+        "width": 900,
+        "height": 1600,
+        "bytes": 155932
+      },
+      {
+        "src": "/media/musical-apresentacao-poster-1080.webp",
+        "width": 1080,
+        "height": 1920,
+        "bytes": 191442
+      }
+    ]
+  }
+}

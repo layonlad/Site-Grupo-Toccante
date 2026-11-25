@@ -1,6 +1,7 @@
 import media from "./media.json";
 import musicMedia from "./music-media.json";
 import cerimonialMedia from "./cerimonial-media.json";
+import newMedia from "./new-media.json";
 
 type Photograph = {
   width: number;
@@ -12,4 +13,5 @@ export const photographs: Record<string, Photograph | undefined> = {
   ...media,
   ...musicMedia,
   ...cerimonialMedia,
+  ...newMedia,
 };

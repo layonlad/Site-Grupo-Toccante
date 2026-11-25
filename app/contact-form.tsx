@@ -1,6 +1,7 @@
 "use client";
 import { useSyncExternalStore, useRef, useState, type FormEvent } from "react";
-import { branches, site } from "./content";
+import { branches } from "./content";
+import { openWhatsApp } from "./whatsapp-link";
 import { emptyQuote, quoteSummary, validateQuote, type Quote } from "./quote";
 function localDay() {
   const d = new Date();
@@ -25,6 +26,7 @@ export default function ContactForm({
   const [busy, setBusy] = useState(false);
   const [copied, setCopied] = useState(false);
   const [copyError, setCopyError] = useState("");
+  const [sentTo, setSentTo] = useState("");
   const today = useSyncExternalStore(watchDay, localDay, () => "");
   const form = useRef<HTMLFormElement>(null);
   const heading = useRef<HTMLHeadingElement>(null);
@@ -112,7 +114,7 @@ export default function ContactForm({
       setCopied(true);
     } catch {
       setCopyError(
-        "Não foi possível copiar automaticamente. Selecione o resumo abaixo e copie-o para enviar no atendimento.",
+        "Não foi possível copiar automaticamente. Selecione o resumo abaixo e copie-o manualmente.",
       );
     } finally {
       setBusy(false);
@@ -143,14 +145,22 @@ export default function ContactForm({
       {ready ? (
         <div className="quote-result">
           <p role="status">
-            Nada foi enviado ainda. Copie o resumo, abra o atendimento oficial e
-            cole a mensagem no WhatsApp do especialista indicado.
+            Revise o resumo e clique em enviar: abriremos o WhatsApp de um
+            especialista da equipe com a mensagem pronta. Nada é enviado até
+            você confirmar no WhatsApp.
           </p>
           <label htmlFor="resumo">Resumo do pedido</label>
           <textarea id="resumo" value={quoteSummary(data)} readOnly rows={12} />
           <div className="actions">
             <button
               className="button"
+              type="button"
+              onClick={() => setSentTo(openWhatsApp(quoteSummary(data)).name)}
+            >
+              1. Enviar pelo WhatsApp
+            </button>
+            <button
+              className="button button-outline"
               type="button"
               onClick={copy}
               disabled={busy}
@@ -160,16 +170,13 @@ export default function ContactForm({
                 ? "Copiando…"
                 : copied
                   ? "Resumo copiado ✓"
-                  : "1. Copiar resumo"}
+                  : "2. Copiar resumo"}
             </button>
-            <a className="button button-outline" href={site.attendance}>
-              2. Abrir atendimento ↗
-            </a>
           </div>
-          {copied && (
+          {sentTo && (
             <p className="success-message" role="status">
-              Resumo copiado. Agora abra o atendimento e envie a mensagem no
-              WhatsApp.
+              Abrimos a conversa com {sentTo}. Confirme o envio no WhatsApp para
+              concluir.
             </p>
           )}
           {copyError && (
@@ -186,7 +193,7 @@ export default function ContactForm({
               focusHeading();
             }}
           >
-            ← Editar meus dados
+            Editar meus dados
           </button>
         </div>
       ) : (
@@ -363,16 +370,15 @@ export default function ContactForm({
                   focusHeading();
                 }}
               >
-                ← Voltar
+                Voltar
               </button>
             )}
             <button className="button" type="submit">
-              {step === 1 ? "Continuar" : "Preparar meu resumo"}{" "}
-              <span aria-hidden="true">→</span>
+              {step === 1 ? "Continuar" : "Preparar meu resumo"}
             </button>
           </div>
           <p className="small-text">
-            O envio ao especialista é concluído por você no WhatsApp.
+            O envio é concluído por você no WhatsApp.
           </p>
         </form>
       )}

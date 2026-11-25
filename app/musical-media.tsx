@@ -1,10 +1,15 @@
 "use client";
 
 import { useEffect, useRef, useState, type KeyboardEvent } from "react";
-import { Photo, SectionHeading } from "./components";
+import { Frame, SectionHeading } from "./components";
 import { portfolio } from "./content";
 
 const newPhotos = [
+  [
+    "musical-quarteto",
+    "Quarteto em cerimônia",
+    "Quatro músicos do Grupo Toccante, com voz, violão, teclado e violino, diante de um arco de flores.",
+  ],
   [
     "musical-violino-ao-ar-livre",
     "Violino ao ar livre",
@@ -88,6 +93,7 @@ export default function MusicalMedia({
     <section id="midia-musical" className="section music-media">
       <div className="container">
         <SectionHeading
+          center
           eyebrow="Toccante Musical"
           title="Apresentações musicais"
         />
@@ -122,16 +128,18 @@ export default function MusicalMedia({
           hidden={active !== "fotos"}
           tabIndex={0}
         >
-          <div className="music-gallery">
-            {[...newPhotos, ...existing].map(([name, title, alt]) => (
+          <div className="masonry music-gallery" data-reveal-group="">
+            {[
+              ...newPhotos,
+              ...existing.filter(([n]) => n !== "musical-quarteto"),
+            ].map(([name, title, alt]) => (
               <figure key={name}>
-                <div className="music-frame">
-                  <Photo
-                    name={name}
-                    alt={alt}
-                    sizes="(max-width: 550px) 92vw, (max-width: 900px) 45vw, 380px"
-                  />
-                </div>
+                <Frame
+                  name={name}
+                  alt={alt}
+                  reveal={false}
+                  sizes="(max-width: 549px) 46vw, (max-width: 1100px) 31vw, 290px"
+                />
                 <figcaption>{title}</figcaption>
               </figure>
             ))}
@@ -144,7 +152,35 @@ export default function MusicalMedia({
           hidden={active !== "videos"}
           tabIndex={0}
         >
-          <p className="music-empty">Ainda não há vídeos publicados.</p>
+          <figure className="music-video">
+            <div className="frame frame-soft">
+              {/* O vídeo original não possui arquivo de legendas. */}
+              {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+              <video
+                controls
+                playsInline
+                preload="none"
+                poster="/media/musical-apresentacao-poster-900.webp"
+                width="720"
+                height="1280"
+                aria-label="Vídeo do Toccante Musical em um casamento ao ar livre."
+              >
+                <source
+                  src="/media/musical-apresentacao.mp4"
+                  type="video/mp4"
+                />
+                <a href="/media/musical-apresentacao.mp4">Abrir o vídeo</a>
+              </video>
+            </div>
+            <figcaption>
+              <p className="eyebrow">Toccante Musical</p>
+              <h3>A música em uma cerimônia ao ar livre.</h3>
+              <p>
+                Um registro da equipe em um casamento, da preparação do espaço
+                ao momento dos noivos.
+              </p>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>

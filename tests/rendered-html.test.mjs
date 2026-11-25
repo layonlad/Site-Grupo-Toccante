@@ -31,7 +31,7 @@ test("all routes render unique titles, descriptions, one heading and verified id
       html,
       /\[Adicionar|Sugestão provisória|Your site is taking shape/,
     );
-    assert.doesNotMatch(html, /5531983858509|grupotoccante@gmail.com/);
+    assert.doesNotMatch(html, /5531983858509/);
   }
 });
 test("missing route returns a real 404 with recovery navigation", async () => {

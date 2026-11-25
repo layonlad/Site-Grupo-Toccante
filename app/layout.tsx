@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { site } from "./content";
 import "./globals.css";
-import "./editorial.css";
 export const metadata: Metadata = {
   metadataBase: new URL(site.origin),
   title: { default: "Grupo Toccante", template: "%s | Grupo Toccante" },
@@ -12,7 +11,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#F7F5F1",
+  themeColor: "#F7F1E6",
 };
 export default function RootLayout({
   children,
@@ -20,8 +19,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" suppressHydrationWarning>
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "try{if(sessionStorage.getItem('tg-intro'))document.documentElement.classList.add('intro-seen')}catch(e){}",
+          }}
+        />
         <link
           rel="preload"
           href="/fonts/EBGaramond.woff2"
@@ -48,9 +53,8 @@ export default function RootLayout({
               name: site.name,
               url: site.origin,
               logo: `${site.origin}/brand.svg`,
-              sameAs: site.socials.map(
-                ([, handle]) => `https://www.instagram.com/${handle}/`,
-              ),
+              email: site.email,
+              sameAs: [site.instagram.url],
             }),
           }}
         />

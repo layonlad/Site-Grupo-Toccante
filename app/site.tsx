@@ -5,6 +5,7 @@ import {
   BranchIndex,
   CTA,
   FAQ,
+  Frame,
   PageHeading,
   Photo,
   SectionHeading,
@@ -13,65 +14,83 @@ import {
 import { branches, people, portfolio, site, type Branch } from "./content";
 import ContactForm from "./contact-form";
 import MusicalMedia from "./musical-media";
+import WhatsAppLink from "./whatsapp-link";
 
 import Home from "./home";
 
+const serviceTitles: Record<string, string> = {
+  cerimonial: "Organização para celebrar com presença.",
+  musica: "Cada momento, uma intenção.",
+  buffet: "Sabores que fazem parte da memória.",
+  decoracao: "Ambientes que contam a sua história.",
+};
+const heroFocus: Record<string, string> = {
+  musica: "50% 10%",
+  cerimonial: "50% 6%",
+  buffet: "50% 60%",
+  decoracao: "50% 45%",
+};
 function BranchPage({ branch: b }: { branch: Branch }) {
+  const few = b.gallery.length <= 3;
   return (
     <Shell page={b.key}>
-      <section className={`branch-hero theme-${b.key}`}>
-        <div className="container branch-hero-grid">
-          <div className="branch-hero-copy">
-            <p className="eyebrow">{b.name}</p>
-            <h1>{b.headline}</h1>
-            <p className="lead">{b.description}</p>
-            <div className="actions">
-              <a className="button" href={`/contato?vertente=${b.key}`}>
-                Pedir uma proposta ↗
-              </a>
-              <a
-                className="text-link"
-                href={
-                  b.key === "musica"
-                    ? "#midia-musical"
-                    : b.key === "cerimonial"
-                      ? "#galeria"
-                      : "#servicos"
-                }
-              >
-                {b.key === "musica"
-                  ? "Fotos e vídeos ↓"
-                  : b.key === "cerimonial"
-                    ? "Ver fotos ↓"
-                    : "Explore a vertente ↓"}
-              </a>
+      <section className="branch-hero">
+        <div className="container">
+          <div className={`branch-panel theme-${b.key}`}>
+            <div className="branch-hero-copy hero-enter">
+              <p className="eyebrow">{b.name}</p>
+              <h1>{b.headline}</h1>
+              <p className="lead">{b.description}</p>
+              <div className="actions">
+                <a className="button" href={`/contato?vertente=${b.key}`}>
+                  Pedir uma proposta
+                </a>
+                <a
+                  className="text-link"
+                  href={
+                    b.key === "musica"
+                      ? "#midia-musical"
+                      : b.gallery.length > 0
+                        ? "#galeria"
+                        : "#servicos"
+                  }
+                >
+                  {b.key === "musica" ? "Fotos e vídeos" : "Ver fotos"}
+                </a>
+              </div>
             </div>
-          </div>
-          <div className="chapter-cover">
-            <Photo name={b.image} alt={b.alt} priority />
+            <div className="chapter-cover hero-enter-photo">
+              <Frame
+                name={b.image}
+                alt={b.alt}
+                shape="arch"
+                ratio="4 / 5"
+                focus={heroFocus[b.key]}
+                priority
+                reveal={false}
+                parallax={0.04}
+                sizes="(max-width: 760px) 78vw, 440px"
+              />
+              <span className="chapter-number" aria-hidden="true">
+                {b.number}
+              </span>
+            </div>
           </div>
         </div>
       </section>
       <section id="servicos" className="section">
         <div className="container">
-          <div className="section-heading-row">
-            <SectionHeading
-              eyebrow="O que fazemos"
-              title={
-                b.key === "cerimonial"
-                  ? "Organização para celebrar com presença."
-                  : b.key === "musica"
-                    ? "Cada momento, uma intenção."
-                    : b.key === "buffet"
-                      ? "Sabores que fazem parte da memória."
-                      : "Ambientes que contam a sua história."
-              }
-            />
+          <div className="section-heading-row" data-reveal="">
+            <div className="section-heading">
+              <p className="eyebrow">O que fazemos</p>
+              <h2>{serviceTitles[b.key]}</h2>
+            </div>
             <p>{b.intro}</p>
           </div>
-          <div className="service-grid">
-            {b.services.map(([title, text]) => (
+          <div className="service-grid" data-reveal-group="">
+            {b.services.map(([title, text], i) => (
               <article key={title}>
+                <span aria-hidden="true">0{i + 1}</span>
                 <h3>{title}</h3>
                 <p>{text}</p>
               </article>
@@ -79,21 +98,24 @@ function BranchPage({ branch: b }: { branch: Branch }) {
           </div>
         </div>
       </section>
-      <section className="section section-soft process-section">
-        <div className="container process-layout">
-          <SectionHeading
-            eyebrow="Da conversa à celebração"
-            title="O cuidado começa antes."
-          />
-          <ol className="process-grid">
-            {b.steps.map(([title, text], i) => (
-              <li key={title}>
-                <span>0{i + 1}</span>
-                <h3>{title}</h3>
-                <p>{text}</p>
-              </li>
-            ))}
-          </ol>
+      <section className="section process-section">
+        <div className="container">
+          <div className="process-panel">
+            <SectionHeading
+              center
+              eyebrow="Da conversa à celebração"
+              title="O cuidado começa antes."
+            />
+            <ol className="process-grid" data-reveal-group="">
+              {b.steps.map(([title, text], i) => (
+                <li key={title}>
+                  <span>0{i + 1}</span>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
       </section>
       {b.key === "musica" ? (
@@ -102,38 +124,42 @@ function BranchPage({ branch: b }: { branch: Branch }) {
         b.gallery.length > 0 && (
           <section className="section" id="galeria">
             <div className="container">
-              <div className="section-heading-row">
-                <SectionHeading
-                  eyebrow={
-                    b.key === "cerimonial"
+              <div className="section-heading-row" data-reveal="">
+                <div className="section-heading">
+                  <p className="eyebrow">
+                    {b.key === "cerimonial"
                       ? "Toccante Cerimonial"
-                      : "Acontece de verdade"
-                  }
-                  title={
-                    b.key === "cerimonial"
+                      : "Acontece de verdade"}
+                  </p>
+                  <h2>
+                    {b.key === "cerimonial"
                       ? "Nos bastidores da celebração."
-                      : "Um olhar para o nosso trabalho."
-                  }
-                />
-                <a className="text-link" href={`/portfolio?vertente=${b.key}`}>
-                  Ver portfólio ↗
+                      : "Um olhar para o nosso trabalho."}
+                  </h2>
+                </div>
+                <a
+                  className="button button-outline"
+                  href={`/portfolio?vertente=${b.key}`}
+                >
+                  Ver portfólio
                 </a>
               </div>
               <div
-                className={`branch-gallery count-${b.gallery.length}${b.key === "cerimonial" ? " cerimonial-gallery" : ""}`}
+                className={`masonry branch-gallery${few ? " is-few" : ""}`}
+                data-reveal-group=""
               >
                 {b.gallery.map((name) => {
                   const item = portfolio.find((p) => p.image === name);
                   return (
                     <figure key={name}>
-                      <Photo
+                      <Frame
                         name={name}
                         alt={item?.alt || b.alt}
-                        sizes="(max-width: 549px) 100vw, (max-width: 900px) 50vw, 33vw"
+                        reveal={false}
+                        ratio={few ? "4 / 3" : undefined}
+                        sizes="(max-width: 549px) 46vw, (max-width: 1100px) 31vw, 290px"
                       />
-                      {b.key === "cerimonial" && (
-                        <figcaption>{item?.title}</figcaption>
-                      )}
+                      {item?.title && <figcaption>{item.title}</figcaption>}
                     </figure>
                   );
                 })}
@@ -143,11 +169,13 @@ function BranchPage({ branch: b }: { branch: Branch }) {
         )
       )}
       {b.key !== "cerimonial" && (
-        <section className="section section-soft">
+        <section className="section">
           <div className="container split-layout">
-            <Photo
-              className={b.teamImage.includes("equipe") ? "team-photo" : ""}
+            <Frame
               name={b.teamImage}
+              shape={b.teamImage.includes("equipe") ? "soft" : "arch"}
+              ratio={b.teamImage.includes("equipe") ? undefined : "4 / 5"}
+              sizes="(max-width: 767px) 92vw, 46vw"
               alt={
                 b.teamImage.includes("equipe")
                   ? `Equipe ${b.name}`
@@ -156,18 +184,18 @@ function BranchPage({ branch: b }: { branch: Branch }) {
                     : "Arranjo de flores brancas na cerimônia"
               }
             />
-            <div>
-              <SectionHeading
-                eyebrow={
-                  b.key === "decoracao"
+            <div data-reveal="">
+              <div className="section-heading">
+                <p className="eyebrow">
+                  {b.key === "decoracao"
                     ? "O cuidado na composição"
-                    : "Pessoas e cuidado"
-                }
-                title={b.teamTitle}
-                text={b.teamText}
-              />
+                    : "Pessoas e cuidado"}
+                </p>
+                <h2>{b.teamTitle}</h2>
+                <p className="lead">{b.teamText}</p>
+              </div>
               <Link prefetch={false} className="text-link" href="/equipe">
-                Conheça o grupo ↗
+                Conheça o grupo
               </Link>
             </div>
           </div>
@@ -182,15 +210,16 @@ function About() {
   return (
     <Shell page="quem-somos">
       <PageHeading
-        image="decoracao-flores-corredor"
-        imageAlt="Flores brancas junto aos bancos da cerimônia."
+        image="decoracao-mesa-bolo"
+        imageAlt="Mesa de bolo sob flores e folhagens suspensas."
+        focus="50% 50%"
         eyebrow="Nossa essência"
         title="Um grupo. Muitas formas de tocar uma história."
         text="O Grupo Toccante reúne Música, Buffet, Decoração e Cerimonial com sensibilidade, organização e propósito."
       />
       <section className="section">
         <div className="container story-film">
-          <div>
+          <div data-reveal="">
             <SectionHeading
               eyebrow="O que nos move"
               title="Celebrar também é uma forma de cuidar."
@@ -206,15 +235,16 @@ function About() {
               atenção aos detalhes e às pessoas.
             </p>
             <Link prefetch={false} className="text-link" href="/equipe">
-              As pessoas por trás do grupo ↗
+              As pessoas por trás do grupo
             </Link>
           </div>
-          <figure className="institutional-film">
+          <figure className="institutional-film" data-reveal="zoom">
             <video
-              controls
               playsInline
               muted
-              preload="none"
+              loop
+              autoPlay
+              preload="metadata"
               poster="/media/abertura-grupo-toccante.webp"
               width="1920"
               height="1080"
@@ -232,13 +262,14 @@ function About() {
           </figure>
         </div>
       </section>
-      <section className="section section-soft">
+      <section className="section">
         <div className="container">
           <SectionHeading
+            center
             eyebrow="Nossa forma de servir"
             title="Cuidado que se revela na prática."
           />
-          <div className="values-grid">
+          <div className="values-grid" data-reveal-group="">
             {[
               [
                 "Sensibilidade",
@@ -261,6 +292,7 @@ function About() {
       <section className="section">
         <div className="container">
           <SectionHeading
+            center
             eyebrow="Quatro vertentes"
             title="Uma experiência conectada."
           />
@@ -277,6 +309,8 @@ function Team() {
       <PageHeading
         image="equipe-buffet"
         imageAlt="Equipe do buffet reunida no salão do evento."
+        shape="soft"
+        ratio="1280 / 580"
         eyebrow="Nossa equipe"
         title="O cuidado tem pessoas por trás."
         text="Profissionais que conectam planejamento, sensibilidade e presença em cada celebração."
@@ -285,7 +319,7 @@ function Team() {
         <div className="container">
           <div className="people-grid">
             {people.map((p) => (
-              <article key={p.name}>
+              <article key={p.name} data-reveal="">
                 <p className="eyebrow">{p.role}</p>
                 <h2>{p.name}</h2>
                 <p>{p.text}</p>
@@ -294,36 +328,46 @@ function Team() {
           </div>
         </div>
       </section>
-      <section className="section section-soft">
+      <section className="section">
         <div className="container">
           <SectionHeading
+            center
             eyebrow="Trabalho em conjunto"
             title="Cada especialidade faz parte do todo."
           />
-          <div className="team-sectors">
+          <div className="team-sectors" data-reveal-group="">
             {[
               {
-                image: "equipe-buffet",
+                image: "buffet-salgados-tabua",
                 name: "Buffet",
+                alt: "Profissional do Buffet Toccante serve tábuas de salgados.",
+                focus: "50% 10%",
                 text: "Cozinha, serviço e coordenação, com atenção à experiência de receber.",
               },
               {
-                image: "musical-teclado",
+                image: "musical-quarteto",
                 name: "Musical",
+                alt: "Quatro músicos do Grupo Toccante diante de um arco de flores.",
+                focus: "50% 70%",
                 text: "Vozes e instrumentos em sintonia com os momentos da cerimônia.",
               },
               {
                 image: "cerimonial-retrato-equipe",
                 name: "Cerimonial",
                 alt: "Profissional do Grupo Toccante em uniforme do cerimonial ao ar livre.",
+                focus: "50% 20%",
                 text: "Planejamento, acolhimento e acompanhamento dos bastidores.",
               },
             ].map((t) => (
               <article key={t.name}>
-                <Photo
+                <Frame
                   name={t.image}
-                  className={t.image.includes("equipe") ? "team-photo" : ""}
-                  alt={t.alt || `Profissionais da vertente ${t.name}`}
+                  shape="arch"
+                  ratio="4 / 5"
+                  focus={t.focus}
+                  reveal={false}
+                  alt={t.alt}
+                  sizes="(max-width: 767px) 80vw, 340px"
                 />
                 <h3>{t.name}</h3>
                 <p>{t.text}</p>
@@ -365,8 +409,8 @@ function Portfolio({ initialBranch }: { initialBranch?: string }) {
   return (
     <Shell page="portfolio">
       <PageHeading
-        image="buffet-doces"
-        imageAlt="Detalhe de uma bandeja de doces de casamento."
+        image="buffet-frios-camadas"
+        imageAlt="Suporte de bambu com frutas e frios em uma mesa de recepção."
         eyebrow="Nosso portfólio"
         title="Momentos reais. Detalhes que permanecem."
         text="Um olhar para a música, os sabores, os ambientes e as pessoas que participam das nossas celebrações."
@@ -395,7 +439,7 @@ function Portfolio({ initialBranch }: { initialBranch?: string }) {
               ? "Ainda não há fotografias nesta vertente."
               : `${shown.length} registros ${filter === "todos" ? "no portfólio" : "de " + branches.find((b) => b.key === filter)?.label}`}
           </p>
-          <div className="portfolio-grid">
+          <div className="masonry portfolio-grid">
             {shown.map((p) => (
               <figure key={p.image}>
                 <button
@@ -411,10 +455,10 @@ function Portfolio({ initialBranch }: { initialBranch?: string }) {
                   <Photo
                     name={p.image}
                     alt={p.alt}
-                    sizes="(max-width:650px) 100vw, (max-width:1000px) 50vw, 33vw"
+                    sizes="(max-width:650px) 46vw, (max-width:1100px) 31vw, 290px"
                   />
                   <span className="expand-photo" aria-hidden="true">
-                    Ampliar ↗
+                    Ampliar
                   </span>
                 </button>
                 <figcaption>
@@ -441,7 +485,7 @@ function Portfolio({ initialBranch }: { initialBranch?: string }) {
         }}
       >
         <button className="close-button" onClick={close}>
-          Fechar ×
+          Fechar
         </button>
         {selected && (
           <figure>
@@ -465,6 +509,7 @@ function Contact({ initialBranch }: { initialBranch?: string }) {
       <PageHeading
         image="cerimonial-orientacao"
         imageAlt="Cerimonialista com a prancheta conversa na entrada do evento."
+        focus="50% 22%"
         eyebrow="Contato e orçamento"
         title="Toda celebração começa com uma conversa."
         text="Conte um pouco sobre o seu evento. Vamos preparar juntos as próximas escolhas."
@@ -481,19 +526,22 @@ function Contact({ initialBranch }: { initialBranch?: string }) {
             </p>
             <ol>
               <li>Conte o que já está planejando.</li>
-              <li>Revise e copie seu resumo.</li>
+              <li>Revise o resumo do seu pedido.</li>
               <li>
-                Abra o atendimento e envie pelo WhatsApp ao especialista
-                indicado.
+                Envie pelo WhatsApp: você fala com um especialista da nossa
+                equipe.
               </li>
             </ol>
-            <a className="text-link" href={site.attendance}>
-              Prefiro conversar diretamente ↗
-            </a>
+            <WhatsAppLink className="text-link">
+              Prefiro conversar diretamente
+            </WhatsAppLink>
             <hr />
             <p className="small-text">
-              O atendimento oficial encaminha você a um especialista da equipe.
-              O formulário não envia mensagens automaticamente.
+              Também atendemos por e-mail:{" "}
+              <a href={`mailto:${site.email}`}>{site.email}</a>
+              <br />
+              Instagram:{" "}
+              <a href={site.instagram.url}>@{site.instagram.handle}</a>
             </p>
           </aside>
         </div>
@@ -521,18 +569,18 @@ function Privacy() {
           </p>
           <h2>Ao continuar o atendimento</h2>
           <p>
-            Você pode copiar o resumo para a área de transferência e abrir a
-            página oficial de atendimento. O especialista é indicado pelo canal
-            de atendimento. A mensagem só é enviada quando você a cola e
-            confirma o envio no WhatsApp.
+            Ao clicar em enviar, abrimos o WhatsApp de um especialista da
+            equipe, com o resumo já escrito. A mensagem só é enviada quando você
+            confirma o envio no WhatsApp. Para distribuir os atendimentos, o
+            navegador guarda apenas um número de posição na fila; nenhum dado
+            pessoal é guardado.
           </p>
           <h2>Outros serviços</h2>
           <p>
-            A página de atendimento e o WhatsApp têm funcionamento e práticas
-            próprios. Consulte as informações disponibilizadas nesses serviços
-            antes de compartilhar dados. O acesso e os registros técnicos de
-            hospedagem seguem as configurações da plataforma que hospeda este
-            site.
+            O WhatsApp tem funcionamento e práticas próprios. Consulte as
+            informações disponibilizadas por ele antes de compartilhar dados. O
+            acesso e os registros técnicos de hospedagem seguem as configurações
+            da plataforma que hospeda este site.
           </p>
           <h2>O que informar</h2>
           <p>
@@ -542,9 +590,8 @@ function Privacy() {
           </p>
           <h2>Dúvidas sobre o atendimento</h2>
           <p>
-            Para esclarecer o uso das informações após o envio, fale com a
-            equipe pelo{" "}
-            <a href={site.attendance}>canal oficial de atendimento</a>.
+            Para esclarecer o uso das informações após o envio, escreva para{" "}
+            <a href={`mailto:${site.email}`}>{site.email}</a>.
           </p>
         </div>
       </section>
@@ -555,7 +602,7 @@ export function MissingPage() {
   return (
     <Shell page="404">
       <section className="section missing-page">
-        <div className="container">
+        <div className="container masthead-panel is-plain">
           <p className="eyebrow">Página não encontrada · 404</p>
           <h1>Vamos encontrar o caminho de volta.</h1>
           <p>
@@ -567,7 +614,7 @@ export function MissingPage() {
               Voltar ao início
             </Link>
             <Link prefetch={false} className="text-link" href="/contato">
-              Falar com a equipe ↗
+              Falar com a equipe
             </Link>
           </div>
         </div>

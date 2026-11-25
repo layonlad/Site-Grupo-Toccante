@@ -1,12 +1,11 @@
 export const site = {
   name: "Grupo Toccante",
-  origin: "https://grupo-toccante-eventos.layonlad.chatgpt.site",
-  attendance: "https://grupotoccanteoficial.github.io/Link.toccante/",
-  socials: [
-    ["Toccante Musical", "toccantemusical"],
-    ["Toccante Buffet e Decoração", "buffetdecoracaotoccante"],
-    ["Toccante Cerimonial", "cerimonialtoccante"],
-  ],
+  origin: "https://layonlad.github.io/Site-Grupo-Toccante",
+  instagram: {
+    handle: "Grupotoccante",
+    url: "https://www.instagram.com/grupotoccante/",
+  },
+  email: "grupotoccante@gmail.com",
 };
 export const navigation = [
   ["Quem somos", "/quem-somos"],
@@ -119,8 +118,8 @@ export const branches = [
       "Sabores, apresentação e uma equipe atenta, da cozinha à mesa.",
     intro:
       "O cardápio faz parte da experiência de receber. Com opções de coquetel, gastronomia mineira, pratos principais e doces, o buffet é planejado de acordo com a celebração.",
-    image: "buffet-mesa-mineira",
-    alt: "Mesa de gastronomia mineira com pratos e acompanhamentos",
+    image: "buffet-mesa-frios",
+    alt: "Mesa de frios com espetinhos, morangos e queijos sobre suportes de madeira.",
     services: [
       ["Boas-vindas", "Coquetel e salgados para o início da recepção."],
       [
@@ -147,7 +146,20 @@ export const branches = [
       ],
       ["Recepção", "A equipe organiza o atendimento da cozinha ao salão."],
     ],
-    gallery: ["buffet-salgados", "buffet-doces", "buffet-massas"],
+    gallery: [
+      "buffet-mesa-frios",
+      "buffet-salgados-tabua",
+      "buffet-pratos-quentes",
+      "buffet-frios-camadas",
+      "buffet-ilha-gastronomica",
+      "buffet-doces-nozes",
+      "buffet-petiscos",
+      "buffet-mesa-posta",
+      "buffet-panelas",
+      "buffet-salgados",
+      "buffet-doces",
+      "buffet-massas",
+    ],
     teamTitle: "Cuidado da cozinha ao salão.",
     teamText:
       "Chef, auxiliares, copeiro, garçons, coordenação e recepção compõem a estrutura apresentada nos materiais. A equipe é dimensionada na proposta do evento.",
@@ -354,6 +366,78 @@ export const portfolio = [
     title: "Sons que dão vida ao momento",
     alt: "Saxofonista do Grupo Toccante durante uma apresentação",
   },
+  {
+    branch: "buffet",
+    image: "buffet-mesa-frios",
+    title: "Mesa de frios",
+    alt: "Mesa de frios com espetinhos de salame, morangos e queijos sobre suportes de madeira.",
+  },
+  {
+    branch: "buffet",
+    image: "buffet-salgados-tabua",
+    title: "Salgados servidos à mesa",
+    alt: "Profissional do Buffet Toccante leva uma bandeja com tábuas de coxinhas, mini pizzas e espetinhos.",
+  },
+  {
+    branch: "musica",
+    image: "musical-quarteto",
+    title: "Quarteto em cerimônia",
+    alt: "Quatro músicos do Grupo Toccante, com voz, violão, teclado e violino, diante de um arco de flores.",
+  },
+  {
+    branch: "buffet",
+    image: "buffet-pratos-quentes",
+    title: "Pratos quentes",
+    alt: "Mesa com paella enfeitada com ovos, panelas de pedra e biscoitos salgados.",
+  },
+  {
+    branch: "buffet",
+    image: "buffet-frios-camadas",
+    title: "Frios e frutas em camadas",
+    alt: "Suporte de bambu em três níveis com kiwi, damascos, salame e azeitonas.",
+  },
+  {
+    branch: "buffet",
+    image: "buffet-ilha-gastronomica",
+    title: "Ilha gastronômica ao ar livre",
+    alt: "Cozinheiros servem pratos quentes em uma ilha decorada com velas e flores.",
+  },
+  {
+    branch: "buffet",
+    image: "buffet-doces-nozes",
+    title: "Doces finos com nozes",
+    alt: "Bandeja de cristal com doces de chocolate cobertos por nozes douradas.",
+  },
+  {
+    branch: "buffet",
+    image: "buffet-petiscos",
+    title: "Petiscos na tábua",
+    alt: "Tábua de madeira com pastéis assados, mini sanduíches e frango.",
+  },
+  {
+    branch: "buffet",
+    image: "buffet-mesa-posta",
+    title: "Mesa posta com flores",
+    alt: "Mesa de madeira com arranjos de rosas e lírios, sousplats de palha e guardanapos brancos.",
+  },
+  {
+    branch: "buffet",
+    image: "buffet-panelas",
+    title: "Serviço em panelas de pedra",
+    alt: "Panelas de pedra e réchaud de inox dispostos sobre uma mesa rústica.",
+  },
+  {
+    branch: "buffet",
+    image: "buffet-salgados",
+    title: "Salgados de boas-vindas",
+    alt: "Seleção de salgados servidos na recepção.",
+  },
+  {
+    branch: "buffet",
+    image: "buffet-massas",
+    title: "Massas",
+    alt: "Massas servidas em travessas na mesa do buffet.",
+  },
   ...cerimonialPhotos.map((photo) => ({ ...photo, branch: "cerimonial" })),
 ];
 export const pageMeta: Record<
@@ -388,7 +472,7 @@ export const pageMeta: Record<
   privacidade: {
     title: "Privacidade",
     description:
-      "Entenda como o formulário prepara seu resumo e como continuar o atendimento do Grupo Toccante.",
+      "Entenda como o formulário prepara seu resumo e como falar com a equipe do Grupo Toccante.",
   },
   ...Object.fromEntries(
     branches.map((b) => [b.key, { title: b.name, description: b.description }]),
