@@ -8,7 +8,7 @@ const frames = [
     className: "frame-arch collage-main",
     ratio: "4 / 5",
     parallax: 0.04,
-    sizes: "(max-width: 760px) 80vw, 440px",
+    sizes: "(max-width: 760px) 55vw, 440px",
   },
   {
     slides: heroSlides.music,
@@ -68,7 +68,7 @@ export default function HeroCollage() {
             <textPath href="#seal-path">{ring + ring}</textPath>
           </text>
         </svg>
-        <img src="/brand.svg" width="48" height="52" alt="" />
+        <img src="/brand-mark.webp" width="48" height="52" alt="" />
       </div>
       <div className="carousel-controls collage-controls">
         <PlayToggle playing={playing} onToggle={() => setPlaying(!playing)} />

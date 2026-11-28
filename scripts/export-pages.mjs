@@ -33,7 +33,7 @@ const routes = [
 ];
 const route = routes.join("|");
 const FILES =
-  /(?<![\w./-])\/(?=(?:media|_next|fonts|assets)\/|(?:brand|favicon)\.svg)/g;
+  /(?<![\w./-])\/(?=(?:media|_next|fonts|assets)\/|(?:brand|favicon)\.svg|brand-mark\.webp|icon-64\.png|apple-touch-icon\.png)/g;
 const prefixFiles = (text) => text.replace(FILES, `${PREFIX}/`);
 // Dados do React embutidos na página. Linhas de texto ("f:T59b,...") declaram
 // o próprio tamanho em bytes, que muda com o prefixo e precisa ser refeito.

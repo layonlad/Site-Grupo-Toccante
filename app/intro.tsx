@@ -13,7 +13,20 @@ export default function Intro() {
     } catch {
       /* armazenamento indisponível: a abertura apenas toca normalmente */
     }
-    if (seen || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    // Em conexão lenta ou com economia de dados, o site abre direto.
+    const connection = (
+      navigator as Navigator & {
+        connection?: { saveData?: boolean; effectiveType?: string };
+      }
+    ).connection;
+    const slow =
+      connection?.saveData ||
+      /(^|-)2g|3g/.test(connection?.effectiveType ?? "");
+    if (
+      seen ||
+      slow ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
       const skip = requestAnimationFrame(() => setState("done"));
       return () => cancelAnimationFrame(skip);
     }

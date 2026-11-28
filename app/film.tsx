@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { FilmItem } from "./gallery";
 import films from "./video-media.json";
 
@@ -25,6 +25,8 @@ export default function Film({
   active?: boolean;
 }) {
   const ref = useRef<HTMLVideoElement>(null);
+  // A capa só é baixada quando o vídeo se aproxima da tela.
+  const near = useNear(ref);
   useEffect(() => {
     if (!active) ref.current?.pause();
   }, [active]);
@@ -72,7 +74,7 @@ export default function Film({
         controls
         playsInline
         preload="none"
-        poster={media.poster}
+        poster={near ? media.poster : undefined}
         width={media.width}
         height={media.height}
         aria-label={label}
@@ -103,5 +105,64 @@ export function FilmGrid({
         </figure>
       ))}
     </div>
+  );
+}
+
+/** Fica verdadeiro (e permanece) quando o elemento chega perto da tela. */
+function useNear(ref: React.RefObject<HTMLElement | null>, margin = "400px") {
+  const [near, setNear] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || near) return;
+    if (!("IntersectionObserver" in window)) {
+      const frame = requestAnimationFrame(() => setNear(true));
+      return () => cancelAnimationFrame(frame);
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry?.isIntersecting) setNear(true);
+      },
+      { rootMargin: margin },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [ref, near, margin]);
+  return near;
+}
+
+/**
+ * Animação da marca em loop e sem som: só é baixada e toca quando aparece na
+ * tela, e respeita a preferência por menos movimento.
+ */
+export function BrandLoop({ label }: { label: string }) {
+  const ref = useRef<HTMLVideoElement>(null);
+  const near = useNear(ref, "200px");
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || !near) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry?.isIntersecting) el.play().catch(() => {});
+      else el.pause();
+    });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [near]);
+  return (
+    <video
+      ref={ref}
+      muted
+      loop
+      playsInline
+      preload="none"
+      poster="/media/abertura-grupo-toccante.webp"
+      width="1280"
+      height="720"
+      aria-label={label}
+    >
+      {near && (
+        <source src="/media/abertura-grupo-toccante.mp4" type="video/mp4" />
+      )}
+    </video>
   );
 }

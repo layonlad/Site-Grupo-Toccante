@@ -18,8 +18,11 @@ function storage() {
 export function openWhatsApp(text: string = defaultMessage): Contact {
   const contact = claimContact(storage());
   const url = whatsappUrl(contact, text);
-  const win = window.open(url, "_blank", "noopener,noreferrer");
-  if (!win) window.location.href = url;
+  // Com "noopener" o navegador devolve null mesmo quando abre a aba, e a
+  // página atual também seria trocada. Por isso o vínculo é cortado depois.
+  const win = window.open(url, "_blank");
+  if (win) win.opener = null;
+  else window.location.href = url;
   return contact;
 }
 // Sem JavaScript o link leva ao formulário de contato.

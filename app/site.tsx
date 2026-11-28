@@ -13,7 +13,7 @@ import {
 import { branches, people, portfolio, site, type Branch } from "./content";
 import ContactForm from "./contact-form";
 import Carousel from "./carousel";
-import Film, { FilmGrid } from "./film";
+import Film, { BrandLoop, FilmGrid } from "./film";
 import {
   branchFilms,
   contactSlides,
@@ -81,7 +81,7 @@ function BranchPage({ branch: b }: { branch: Branch }) {
                 priority
                 reveal={false}
                 parallax={0.04}
-                sizes="(max-width: 760px) 78vw, 440px"
+                sizes="(max-width: 760px) 55vw, 440px"
               />
               <span className="chapter-number" aria-hidden="true">
                 {b.number}
@@ -256,25 +256,7 @@ function About() {
             </Link>
           </div>
           <figure className="institutional-film" data-reveal="zoom">
-            <video
-              playsInline
-              muted
-              loop
-              autoPlay
-              preload="metadata"
-              poster="/media/abertura-grupo-toccante.webp"
-              width="1920"
-              height="1080"
-              aria-label="Abertura institucional. Animação silenciosa da marca Grupo Toccante."
-            >
-              <source
-                src="/media/abertura-grupo-toccante.mp4"
-                type="video/mp4"
-              />
-              <a href="/media/abertura-grupo-toccante.mp4">
-                Abrir o vídeo da marca
-              </a>
-            </video>
+            <BrandLoop label="Abertura institucional. Animação silenciosa da marca Grupo Toccante." />
             <figcaption>Abertura institucional do Grupo Toccante</figcaption>
           </figure>
         </div>

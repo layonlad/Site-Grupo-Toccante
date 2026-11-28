@@ -22,7 +22,7 @@ const require = createRequire(
 const sharp = require("sharp");
 const src = path.resolve(process.argv[2] ?? path.join(root, ".."));
 const out = path.join(root, "public/media");
-const WIDTHS = [480, 960, 1600, 2400];
+const WIDTHS = [480, 720, 960, 1600, 2400];
 const QUALITY = 86;
 
 // [nome no site, arquivo, recorte opcional de borda em px: todos os lados ou

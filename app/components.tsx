@@ -94,7 +94,7 @@ export function Brand() {
       href="/"
       aria-label="Grupo Toccante — início"
     >
-      <img src="/brand.svg" width="48" height="52" alt="" />
+      <img src="/brand-mark.webp" width="48" height="52" alt="" />
       <span>Grupo Toccante</span>
     </Link>
   );
@@ -413,7 +413,7 @@ export function PageHeading({
                 focus={focus}
                 priority
                 reveal={false}
-                sizes="(max-width: 760px) 80vw, 420px"
+                sizes="(max-width: 760px) 55vw, 420px"
               />
             </div>
           )}
@@ -459,7 +459,7 @@ export function CTA({ branch }: { branch?: Branch }) {
         >
           <img
             className="cta-mark"
-            src="/brand.svg"
+            src="/brand-mark.webp"
             width="64"
             height="70"
             alt=""

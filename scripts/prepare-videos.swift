@@ -7,7 +7,11 @@ import Foundation
 import ImageIO
 import UniformTypeIdentifiers
 
-struct Job { let name: String; let file: String; let poster: Double }
+struct Job {
+  let name: String; let file: String; let poster: Double
+  // Menor lado do vídeo e taxa de bits; nil usa o padrão (1080 px, 6 a 7,5 Mbps).
+  var side: Double? = nil; var rate: Double? = nil
+}
 let jobs = [
   Job(name: "musical-video-1", file: "Musical/copy_F99B0F60-B9CF-4BA8-9B24-5E7336D4878F.mov", poster: 0.81),
   Job(name: "musical-video-2", file: "Musical/copy_23CBE21E-976F-43C8-BC8D-7160A56AE4DC.mov", poster: 0.55),
@@ -18,6 +22,8 @@ let jobs = [
   Job(name: "decoracao-video-2", file: "Decoração/IMG_0410.MOV", poster: 0.29),
   Job(name: "depoimento-felipe-samara", file: "Noivos/Depoimentos/Felipe e Samara/copy_D87A2649-7D33-40C2-A436-E4B6F55120ED.mov", poster: 0.81),
   Job(name: "depoimento-karen-joao", file: "Noivos/Depoimentos/Karen e João/IMG_0998.mov", poster: 0.16),
+  // Abertura da marca: animação simples, cabe em 720p com taxa baixa.
+  Job(name: "abertura-grupo-toccante", file: "Site-Grupo-Toccante/media-src/abertura-grupo-toccante-original.mp4", poster: 0.5, side: 720, rate: 1_400_000),
   Job(name: "depoimento-lais-lucas", file: "Noivos/Depoimentos/Laís e Lucas/IMG_0571.mov", poster: 0.42),
 ]
 // Largura final de 1080 px; nunca amplia. Teto de bytes: abaixo de 100 MB (GitHub).
@@ -35,12 +41,12 @@ func convert(_ job: Job, _ input: URL, _ output: URL) async throws {
   let duration = try await asset.load(.duration)
   let box = CGRect(origin: .zero, size: size).applying(transform)
   let w = abs(box.width), h = abs(box.height)
-  let scale = min(1, targetWidth / min(w, h))
+  let scale = min(1, (job.side ?? targetWidth) / min(w, h))
   let out = CGSize(width: even(w * scale), height: even(h * scale))
   let frames = Double(min(60, max(24, fps.rounded())))
   let budget = maxBytes * 8 / duration.seconds - 192_000
   let wanted = frames > 40 ? 7_500_000.0 : 6_000_000.0
-  let bitrate = min(wanted, budget, Double(rate) * 1.0)
+  let bitrate = min(job.rate ?? wanted, budget, Double(rate) * 1.0)
 
   let comp = AVMutableVideoComposition()
   comp.renderSize = out

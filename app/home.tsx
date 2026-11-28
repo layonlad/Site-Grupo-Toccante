@@ -1,6 +1,7 @@
 import Link from "./link";
 import { BranchIndex, CTA, FAQ, Frame, Shell } from "./components";
 import { branches, portfolio } from "./content";
+import { BrandLoop } from "./film";
 import HeroCollage from "./hero-collage";
 import Intro from "./intro";
 
@@ -70,22 +71,7 @@ export default function Home() {
         <div className="container">
           <div className="house-panel" data-reveal="zoom">
             <div className="house-film">
-              <video
-                muted
-                loop
-                playsInline
-                autoPlay
-                preload="metadata"
-                poster="/media/abertura-grupo-toccante.webp"
-                width="1920"
-                height="1080"
-                aria-label="Animação da marca Grupo Toccante."
-              >
-                <source
-                  src="/media/abertura-grupo-toccante.mp4"
-                  type="video/mp4"
-                />
-              </video>
+              <BrandLoop label="Animação da marca Grupo Toccante." />
             </div>
             <div className="house-story">
               <p className="eyebrow">O Grupo Toccante</p>

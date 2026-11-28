@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: { default: "Grupo Toccante", template: "%s | Grupo Toccante" },
   description:
     "Música, Buffet, Decoração e Cerimonial para celebrar com significado.",
-  icons: { icon: "/brand.svg", apple: "/brand.svg" },
+  icons: { icon: "/icon-64.png", apple: "/apple-touch-icon.png" },
 };
 export const viewport: Viewport = {
   width: "device-width",

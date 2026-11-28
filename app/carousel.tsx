@@ -26,7 +26,7 @@ export default function Carousel({
           slides={slides}
           current={current}
           loaded={ready ? slides.length : 1}
-          sizes="(max-width: 760px) 100vw, 520px"
+          sizes="(max-width: 760px) 60vw, 520px"
         />
       </div>
       <div className="carousel-controls">

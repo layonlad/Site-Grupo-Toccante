@@ -58,26 +58,38 @@ export function useRotation(interval: number) {
   // As demais fotos só começam a baixar depois da primeira.
   const [ready, setReady] = useState(false);
   const held = useRef(false);
+  // Só começa depois que a página terminou de carregar, para que a primeira
+  // foto chegue antes de qualquer outra.
+  const [started, setStarted] = useState(false);
   useEffect(() => {
     const query = window.matchMedia("(prefers-reduced-motion: reduce)");
     function onChange() {
       setPlaying(!query.matches);
     }
     onChange();
-    const timer = window.setTimeout(() => setReady(true), 1200);
+    let timers: number[] = [];
+    function afterLoad() {
+      timers = [
+        window.setTimeout(() => setReady(true), 1500),
+        window.setTimeout(() => setStarted(true), 3500),
+      ];
+    }
+    if (document.readyState === "complete") afterLoad();
+    else window.addEventListener("load", afterLoad, { once: true });
     query.addEventListener("change", onChange);
     return () => {
-      window.clearTimeout(timer);
+      timers.forEach((timer) => window.clearTimeout(timer));
+      window.removeEventListener("load", afterLoad);
       query.removeEventListener("change", onChange);
     };
   }, []);
   useEffect(() => {
-    if (!playing) return;
+    if (!playing || !started) return;
     const timer = window.setInterval(() => {
       if (!held.current && !document.hidden) setTick((value) => value + 1);
     }, interval);
     return () => window.clearInterval(timer);
-  }, [playing, tick, interval]);
+  }, [playing, started, tick, interval]);
   const hold = {
     onMouseEnter: () => {
       held.current = true;
